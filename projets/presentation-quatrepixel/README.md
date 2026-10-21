@@ -24,6 +24,9 @@ la fin avec la foule cagoulée est bien mais casse la cohérence), et `clip_2` a
 - Jeunes de quartier : beaucoup cagoulés, beaucoup non, coupes dégradées, casquettes, survêts.
 - Tout le monde crie, saute, se bat pour atteindre les cartons, prend les articles et **lui tend des billets**.
 - Stock : AirPods, parfums, puffs, casquettes de luxe, sacoches de luxe.
+- Bécanes : 2-3 sautent par-dessus le muret du fond, quelques-unes sortent du passage à droite (couloir du bâtiment), quelques-unes passent à côté de la caméra. Toutes S'ARRÊTENT autour du stand.
+- Plan large : comme dans `16.9_clip_2` (caméra au ras du sol, très loin, lui petit au fond), mais en 9:16 → nouveau décor à faire d'abord (Seedance copie le cadrage du décor).
+- Raté dans `16.9_clip_2` : bécanes et gens vont tout droit, le dépassent et écrasent le stock ; parachutes arc-en-ciel (les vouloir NOIRS) ; les cagoulés se servent dans les cartons = on dirait un braquage. Il faut qu'ils ACHÈTENT : billets tendus vers lui, il encaisse, ils se battent pour acheter.
 - Doit finir serré sur lui entouré de mains, pour raccorder avec le plan AirPods (`references/raccord_airpods_debut.png`).
 
 ## Prompt Seedance
@@ -35,4 +38,4 @@ Le prompt sera en JSON, en français, sans secondes, et passera le garde-fou.
 
 - Durée (réglée) : clip_1 en x2 = 5 s, clip_1_rater en x1,25 = 4,8 s, Snap ~2,5 s, **zbeul ~7 s** (1 clip, 2-3 plans), AirPods 3,2 s, flyer ~2,5 s → ~25 s.
 - Foule (validé) : surtout des cagoules, quelques visages pas vraiment nets, rendu réaliste. Un seul visage net : LE VENDEUR.
-- Références : recadrer le logo « Ai » ; il faut un gros plan visage seul + une image en pied du VENDEUR, et un décor sans perso avec de la place devant le stand pour que les bécanes s'arrêtent.
+- Références (reçues) : `references/1_visage_vendeur.jpg`, `2_en_pied_vendeur.jpg`, `3_decor_stand.jpg` (logo « Ai » recadré). La fiche multi-vues sert seulement à valider le perso.
