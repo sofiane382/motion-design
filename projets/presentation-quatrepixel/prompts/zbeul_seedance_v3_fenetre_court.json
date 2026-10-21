@@ -1,0 +1,19 @@
+{
+"references": "@Image 1 = visage du VENDEUR. @Image 2 = tenue et silhouette du VENDEUR. @Image 3 = décor exact avec LE STAND.",
+"personnage": "Le jeune homme à peau mate, sourcils épais, courte barbe, bonnet noir surmonté de lunettes rondes est LE VENDEUR (visage @Image 1, tenue @Image 2) : lentilles C.P. Company sur les lunettes du bonnet, sur la manche gauche et sur la poche de cuisse gauche ; doudoune kaki brillante ouverte, pull vert sauge, cargo gris anthracite, baskets Mizuno noires. Tenue identique dans tous les plans.",
+"decor": "Décor de @Image 3 : esplanade en béton fissuré d'une cité au coucher du soleil, muret tagué et haute tour au fond, barre d'immeubles à gauche, grand immeuble à droite avec un passage au rez-de-chaussée. Soleil au fond à gauche, contre-jour, longues ombres.",
+"produits": "La chaise noire et les cinq cartons de @Image 3 forment LE STAND, au milieu de l'esplanade : sacoches Lacoste noires, boîtes de puffs JNR pastel, parfums, boîtes d'AirPods, casquettes Gucci et Louis Vuitton. LE STAND reste exactement comme sur @Image 3, totalement immobile.",
+"style": "LE VENDEUR et la foule en 3D style Pixar, décor photoréaliste identique à @Image 3, lumière dorée, poussière, rendu cinéma.",
+"plan_1": {
+"camera": "Plan large en plongée depuis une fenêtre ouverte au quatrième étage de l'immeuble de droite, caméra fixe. Bord de la fenêtre et rideau au premier plan à droite. On voit toute l'esplanade de trois quarts : LE STAND au milieu, LE VENDEUR petit sur sa chaise (un dixième de la hauteur de l'image), le muret et la tour au fond.",
+"action": "D'abord un court calme, LE VENDEUR seul. Ensuite seulement, tout arrive : trois motos cross rouges et blanches sautent le muret du fond, des maxi-scooters gris type TMAX sortent en roue arrière du passage sous la fenêtre, d'autres motos entrent par la gauche dans la poussière. Des parachutes noirs descendent, l'un passe tout près de la fenêtre. Toutes les motos s'arrêtent en cercle autour du STAND, à quelques mètres, et une foule de jeunes accourt et l'entoure.",
+"perso": "LE VENDEUR se lève puis ouvre grand les bras sur les côtés, un peu vers le haut, mains ouvertes, comme pour dire « venez ».",
+"son": "<motos qui hurlent> <pneus qui crissent> <clameur de foule sans mots> <rideau qui claque>"
+},
+"plan_2": {
+"camera": "Coupe au sol, même axe que @Image 3 mais plus près, caméra fixe. LE VENDEUR debout derrière LE STAND, cadré de la tête aux genoux, moitié de la hauteur de l'image ; la tour et les immeubles de @Image 3 derrière.",
+"action": "Chaos de la street autour de lui : jeunes du quartier, un tiers en cagoule noire, les autres flous avec casquettes, coupes dégradées, survêtements ; ils crient, sautent, se bousculent, se rentrent dedans, une casquette vole ; derrière, une cross en roue arrière dans la fumée. Tous agitent des billets en dollars vers lui pour acheter.",
+"expression": "Bras toujours grands ouverts sur les côtés : d'abord yeux écarquillés, bouche entrouverte de stupeur, il tourne la tête vers la foule ; ensuite seulement un grand sourire fier bouche fermée, puis il reste immobile."
+},
+"contraintes": "Personne ne touche, ne renverse ni ne traverse LE STAND : tout le monde s'arrête autour. Parachutes uniquement noirs. Billets en dollars. Seul LE VENDEUR a un visage net, la foule reste floue. Visage et tenue stables, mains réalistes. LE VENDEUR ne regarde jamais la caméra. Aucun zoom. Aucune parole, aucune musique. Pas de sous-titres, pas de texte ajouté, pas de filigrane."
+}
