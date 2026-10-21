@@ -171,3 +171,5 @@ Logo « Ai » à recadrer sur clips 1, 2, 3, 5, 6 et sur le flyer.
 - Foule floue, bizarre, on ne comprend pas ce que c'est. Cause : mon prompt imposait « la foule reste floue ».
 - Pas des jeunes maghrébins / arabes de cité comme voulu. Il veut de vrais jeunes du quartier, typés.
 - Tout le monde a la même tenue : il faut des tenues variées.
+- En plus : on les voit SAUTER DU BÂTIMENT en parachute (noir). Vraiment beaucoup de monde qui se bouscule dans tous les sens.
+- Durée : on peut ajouter 1 s → zbeul ≈ 7 s.
