@@ -154,3 +154,12 @@ Total ≈ 30 s. Maquette de la séquence 2-5 : `montage/snap/maquette_snap.py` (
 Référence visuelle des écrans Snap : `montage/snap/maquette_snap_v3.py` (validée « on garde, on pourra changer plus tard »).
 Son : sons des clips gardés + ding / envoi des écrans Snap. Pas de musique (Sofiane l'ajoute dans CapCut).
 Logo « Ai » à recadrer sur clips 1, 2, 3, 5, 6 et sur le flyer.
+
+## Flyer de fin : textes validés
+
+- Image : `references/flyer/flyer_ecran_vert.webp` (1116x2000, logo « Ai » à recadrer), Snapcode `references/flyer/snapcode_quatrepixel.jpg` à incruster dans l'écran vert.
+- En haut : « TON FLYER VIDÉO » + « qui fait venir tout le quartier ».
+- « Ajoute-moi sur Snapchat » + nom d'utilisateur (à confirmer par Sofiane ; le Snapcode affiche « quatrepixel »).
+- « LYON · 38 · 69 ».
+- PAS de liste de commerces, PAS de délai, PAS de prix.
+- Typo : pas de police banale. Rendu très clean, beau, attirant (titre gras condensé avec effet, hiérarchie nette, peu de texte).
