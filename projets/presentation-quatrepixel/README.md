@@ -48,3 +48,11 @@ la fin avec la foule cagoulée est bien mais casse la cohérence), et `clip_2` a
 - Plan 2 : il se lève et lève les bras : OK. MAIS cadré pile au centre face caméra (le 3/4 sur le tiers gauche a été ignoré) et la foule est 100 % cagoules noires → effet bande / braquage.
 - Plan 3 : il encaisse et donne les AirPods, visage stable : le meilleur plan. MAIS billets en DOLLARS : j'avais écrit « billets de banque » sans préciser euros.
 - Logo « Ai » en haut à gauche.
+
+## Zbeul v2 : décisions validées
+
+- Ce qui manque = UNIQUEMENT l'arrivée de tout le monde pour acheter. Pas de plan où il encaisse (le plan AirPods de `clip_2` existe déjà).
+- 2 plans : (1) plan large, cadrage identique à `3_decor_stand.jpg`, bécanes de partout qui s'arrêtent autour du stand, parachutes noirs, foule qui accourt, il se lève et ouvre grand les bras sur les côtés comme dans `clip_2_refais` vers 7 s ; (2) plan moyen, foule autour de lui qui crie, saute, se bouscule et agite des billets.
+- Billets : DOLLARS (raccord avec le plan AirPods).
+- Perso identique à la fiche : lentilles C.P. Company (bonnet, manche gauche, poche cuisse gauche), baskets Mizuno noires.
+- Dreamina, Seedance 2.0, Référence Omni, 9:16, 6 s (~90 crédits sur 200 → un 2e essai possible).
