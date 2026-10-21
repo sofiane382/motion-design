@@ -69,3 +69,10 @@ la fin avec la foule cagoulée est bien mais casse la cohérence), et `clip_2` a
 
 - Fait par Claude avec HyperFrames quand Sofiane envoie tous les clips.
 - Musique : un son de rap fourni par Sofiane.
+
+## Plan calme, essai 1 : retour
+
+- Beaucoup trop proche (il est coupé à droite), seulement 2 cartons, posés proprement.
+- Il passe à travers les cartons, s'enfonce dans le sol, chaise minuscule, il paraît tout petit, carton bizarre.
+- Sourire pas aimé. Choix validé : JOIE FRANCHE, grand sourire avec les dents, yeux qui brillent, content comme un gamin.
+- À corriger : plan large (en entier, un tiers de la hauteur), cartons à un mètre de lui sur les côtés (jamais devant son corps), pieds à plat, chaise taille normale, cartons simples vides et renversés.
