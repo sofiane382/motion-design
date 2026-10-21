@@ -173,3 +173,5 @@ Logo « Ai » à recadrer sur clips 1, 2, 3, 5, 6 et sur le flyer.
 - Tout le monde a la même tenue : il faut des tenues variées.
 - En plus : on les voit SAUTER DU BÂTIMENT en parachute (noir). Vraiment beaucoup de monde qui se bouscule dans tous les sens.
 - Durée : on peut ajouter 1 s → zbeul ≈ 7 s.
+- Décidé : on reste sur la VUE DE LA FENÊTRE (plan 1), puis coupe au sol (plan 2). 7 s.
+  Depuis la fenêtre : « côté caméra » = bécanes qui sortent du passage juste sous la fenêtre ; « en face » = bécanes qui sautent le muret du fond. Parachutistes qui sautent du toit de la tour d'en face.
