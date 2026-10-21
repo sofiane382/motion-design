@@ -135,3 +135,22 @@ Total ≈ 30 s. Maquette de la séquence 2-5 : `montage/snap/maquette_snap.py` (
 
 - ✅ Validé : la conversation Snap (en train d'écrire… → ding « Ton flyer est prêt 🔥 » → en train d'écrire… → ding « Mets-le en story »), ~3,8 s, avec le Bitmoji de Quatrepixel.
 - ❌ Pas aimé : l'écran « Envoyer à… / Ma story » (mal fait) et les images dedans (miniature du flyer, avatar du vendeur).
+
+## ✅ Montage final validé (v3, ≈ 31 s)
+
+| # | Plan | Source et coupe | Vitesse | Durée |
+|---|---|---|---|---|
+| 1 | Le calme, la boule de foin | `clip_1-1` entier | x1,9 | 4,5 s |
+| 2 | Il s'ennuie, prend son tel, l'écran s'allume | `clip_2-1` 0 → 3,13 s | x1,25 | 2,5 s |
+| 3 | Snap partie 1 : Quatrepixel écrit… ding « Ton flyer est prêt 🔥 », écrit… ding « Mets-le en story » | HyperFrames | — | 3,8 s |
+| 4 | Gros plan : il lit, surpris → sourire | `clip_2-1` 3,13 → 6,0 s | x1 | 2,9 s |
+| 5 | Snap partie 2 : il tape « C'est posté 🔥 » (MOI, bleu), Quatrepixel écrit… ding « Regarde dehors 👀 » + notification « Ma story · Vue par N personnes » (12 → 23 800) | HyperFrames | — | 3,6 s |
+| 6 | Il lève la tête et sourit | `clip_3-1` 1,0 → 2,55 s | x1,25 | 1,2 s |
+| 7 | LE ZBEUL | `clip_4-1` entier | x1 | 6,0 s |
+| 8 | AirPods + billets | `clip_5-1` entier | x1 | 3,2 s |
+| 9 | Coupe sèche → le calme d'après | `clip_6-1` 0 → 3,5 s | x1 | 3,5 s |
+| 10 | Flyer : image fixe, Snapcode incrusté dans l'écran vert, léger zoom | image flyer | — | 2,5 s |
+
+Référence visuelle des écrans Snap : `montage/snap/maquette_snap_v3.py` (validée « on garde, on pourra changer plus tard »).
+Son : sons des clips gardés + ding / envoi des écrans Snap. Pas de musique (Sofiane l'ajoute dans CapCut).
+Logo « Ai » à recadrer sur clips 1, 2, 3, 5, 6 et sur le flyer.
