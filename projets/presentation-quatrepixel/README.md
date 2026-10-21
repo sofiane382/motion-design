@@ -119,7 +119,7 @@ Logo « Ai » : recadré sur tous les plans et le flyer (léger zoom ~6 %).
 
 | # | Plan | Source et coupe | Vitesse | Durée |
 |---|---|---|---|---|
-| 1 | Le calme, la boule de foin | `clip_1-1` entier | x1,4 | 6,1 s |
+| 1 | Le calme, la boule de foin | `clip_1-1` entier | **x1,9** (demandé par Sofiane) | 4,5 s |
 | 2 | Il s'ennuie, prend son tel, l'écran s'allume | `clip_2-1` 0 → 3,13 s | x1,25 | 2,5 s |
 | 3 | Écran Snap : conversation Quatrepixel, « en train d'écrire… » puis ding + « Ton flyer est prêt 🔥 Mets-le en story » | HyperFrames | — | 1,3 s |
 | 4 | Gros plan : il lit, surpris → sourire | `clip_2-1` 3,13 → 6,0 s | x1 | 2,9 s |
