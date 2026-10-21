@@ -114,3 +114,19 @@ Son : sons des clips gardés. ANNULÉ : le son western (`cowboy-standoff.mp3`), 
 
 À AJOUTER (HyperFrames) : la séquence Snap. Quand il est sur son téléphone, on voit l'écran Snap : Quatrepixel lui envoie « ton flyer est terminé… » (texte à choisir), puis il le met en story. Très court.
 Logo « Ai » : recadré sur tous les plans et le flyer (léger zoom ~6 %).
+
+## Scénario de montage v2 (Sofiane : jusqu'à 30 s max, c'est OK)
+
+| # | Plan | Source et coupe | Vitesse | Durée |
+|---|---|---|---|---|
+| 1 | Le calme, la boule de foin | `clip_1-1` entier | x1,4 | 6,1 s |
+| 2 | Il s'ennuie, prend son tel, l'écran s'allume | `clip_2-1` 0 → 3,13 s | x1,25 | 2,5 s |
+| 3 | Écran Snap : conversation Quatrepixel, « en train d'écrire… » puis ding + « Ton flyer est prêt 🔥 Mets-le en story » | HyperFrames | — | 1,3 s |
+| 4 | Gros plan : il lit, surpris → sourire | `clip_2-1` 3,13 → 6,0 s | x1 | 2,9 s |
+| 5 | Il tape sur son tel (bulle « Ajouté à ta story ✓ »), lève la tête, sourit | `clip_3-1` entier | x1,25 | 2,0 s |
+| 6 | LE ZBEUL | `clip_4-1` entier | x1 | 6,0 s |
+| 7 | AirPods + billets | `clip_5-1` entier | x1 | 3,2 s |
+| 8 | Coupe sèche → le calme d'après | `clip_6-1` 0 → 3,5 s | x1 | 3,5 s |
+| 9 | Flyer : image fixe, Snapcode incrusté dans l'écran vert, léger zoom | image | — | 2,5 s |
+
+Total ≈ 30 s. Maquette de la séquence 2-5 : `montage/snap/maquette_snap.py` (aperçu validé ou non : en attente).
