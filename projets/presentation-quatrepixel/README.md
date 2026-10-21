@@ -56,3 +56,9 @@ la fin avec la foule cagoulée est bien mais casse la cohérence), et `clip_2` a
 - Billets : DOLLARS (raccord avec le plan AirPods).
 - Perso identique à la fiche : lentilles C.P. Company (bonnet, manche gauche, poche cuisse gauche), baskets Mizuno noires.
 - Dreamina, Seedance 2.0, Référence Omni, 9:16, 6 s (~90 crédits sur 200 → un 2e essai possible).
+
+## Essai v3 (vue fenêtre) : retour de Sofiane
+
+- Bécanes SANS PILOTE : le prompt ne disait jamais « avec un pilote dessus ».
+- Foule pas « mecs de quartier » : « flous » + description trop courte → foule générique.
+- Ils n'achètent pas, ne vident pas le stock : le prompt interdisait de toucher LE STAND (« totalement immobile », « personne ne touche »). Erreur : il veut qu'ils se jettent tous sur les cartons ET paient (billets tendus), et que le stock soit vidé d'un coup.
