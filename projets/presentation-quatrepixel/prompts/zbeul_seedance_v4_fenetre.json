@@ -1,0 +1,20 @@
+{
+"references": "@Image 1 = visage du VENDEUR. @Image 2 = tenue et silhouette du VENDEUR. @Image 3 = décor exact avec LE STAND.",
+"personnage": "Le jeune homme à peau mate, sourcils épais, courte barbe, bonnet noir surmonté de lunettes rondes est LE VENDEUR (visage @Image 1, tenue @Image 2) : lentilles C.P. Company sur les lunettes du bonnet, la manche gauche et la poche de cuisse gauche ; doudoune kaki brillante ouverte, pull vert sauge, cargo gris anthracite, baskets Mizuno noires. Tenue identique partout.",
+"decor": "Décor de @Image 3 : esplanade en béton fissuré d'une cité au coucher du soleil, muret tagué et haute tour au fond, barre d'immeubles à gauche, grand immeuble à droite avec un passage au rez-de-chaussée. Soleil au fond à gauche, contre-jour.",
+"stand": "La chaise noire et les cinq cartons pleins de @Image 3 forment LE STAND, au milieu de l'esplanade : sacoches Lacoste noires, boîtes de puffs JNR pastel, parfums, boîtes d'AirPods, casquettes Gucci et Louis Vuitton.",
+"foule": "LA FOULE = des dizaines de jeunes de cité français de 16 à 25 ans, cheveux noirs en dégradé, casquettes, survêtements noirs et gris, Nike TN aux pieds, sacoches en bandoulière ; environ un tiers en cagoule noire. Aucun cheveu teint. Souvent de dos ou de profil. Chacun tient des billets en dollars à la main.",
+"style": "LE VENDEUR et LA FOULE en 3D style Pixar, décor photoréaliste identique à @Image 3, lumière dorée, poussière, rendu cinéma.",
+"plan_1": {
+"camera": "Plan large en plongée depuis une fenêtre ouverte au quatrième étage de l'immeuble de droite, caméra fixe. Seul le bord du cadre de la fenêtre apparaît sur le côté droit, avec un rideau fin qui bouge à peine et ne cache jamais l'esplanade. On voit l'esplanade de trois quarts : LE STAND au milieu, LE VENDEUR assis, un dixième de la hauteur de l'image.",
+"action": "D'abord un court calme. Ensuite seulement : trois motos cross rouges et blanches, chacune avec son pilote casqué, sautent le muret du fond ; des scooters TMAX gris, chacun avec son pilote cagoulé, sortent en roue arrière du passage sous la fenêtre ; des parachutistes en parachute noir descendent entre les tours. Les pilotes freinent autour du STAND, sautent de leur moto et courent vers lui avec LA FOULE qui arrive de partout.",
+"perso": "LE VENDEUR se lève et ouvre grand les bras sur les côtés, mains ouvertes, comme pour dire « venez ».",
+"son": "<motos qui hurlent> <pneus qui crissent> <clameur de foule sans mots>"
+},
+"plan_2": {
+"camera": "Coupe au sol, même axe que @Image 3 mais plus près, caméra fixe. LE VENDEUR debout derrière LE STAND, de la tête aux genoux, moitié de la hauteur de l'image ; les cartons en bas de l'image.",
+"action": "LA FOULE se jette sur LE STAND : ils se bousculent, se rentrent dedans, crient, plongent les mains dans les cartons et prennent sacoches, puffs, parfums, AirPods et casquettes ; en même temps chacun tend ses billets vers LE VENDEUR. Les cartons se vident d'un coup. Une casquette vole en l'air ; au fond, une cross fait une roue arrière.",
+"perso": "Bras grands ouverts, LE VENDEUR reçoit les billets qu'on lui fourre dans les mains : d'abord yeux écarquillés, bouche entrouverte de stupeur ; ensuite seulement un grand sourire. Puis il reste immobile, les mains pleines de billets."
+},
+"contraintes": "Chaque moto et chaque scooter qui roule a un pilote dessus. Personne ne renverse ni n'écrase LE STAND. C'est un achat, pas un vol : chaque client paie LE VENDEUR. Billets en dollars, tenus dans les mains. Parachutes uniquement noirs. Seul LE VENDEUR a un visage net. Visage et tenue stables, mains réalistes. LE VENDEUR ne regarde jamais la caméra. Aucun zoom. Aucune parole, aucune musique. Pas de sous-titres, pas de texte ajouté, pas de filigrane."
+}
