@@ -130,3 +130,8 @@ Logo « Ai » : recadré sur tous les plans et le flyer (léger zoom ~6 %).
 | 9 | Flyer : image fixe, Snapcode incrusté dans l'écran vert, léger zoom | image | — | 2,5 s |
 
 Total ≈ 30 s. Maquette de la séquence 2-5 : `montage/snap/maquette_snap.py` (aperçu validé ou non : en attente).
+
+## Séquence Snap : retour sur l'exemple 2
+
+- ✅ Validé : la conversation Snap (en train d'écrire… → ding « Ton flyer est prêt 🔥 » → en train d'écrire… → ding « Mets-le en story »), ~3,8 s, avec le Bitmoji de Quatrepixel.
+- ❌ Pas aimé : l'écran « Envoyer à… / Ma story » (mal fait) et les images dedans (miniature du flyer, avatar du vendeur).
