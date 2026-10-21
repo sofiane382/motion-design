@@ -12,8 +12,8 @@ Format : vertical 9:16, 720x1280, 24 i/s. Clips générés avec Seedance (CapCut
 | 3b | Il lève la tête, inspire, petit sourire (il entend arriver le quartier) | `clip_2_refais` de 0 à **3,0 s** | ✅ gardé |
 | 4 | **Le zbeul** (vue fenêtre puis coupe au sol) | Seedance, `prompts/zbeul_seedance_v4_fenetre.json` | ✅ validé (un peu juste en monde) |
 | 5 | Il distribue les AirPods, billets dans les mains | `clip_2` de **6,83 s à la fin** (3,2 s) | ✅ gardé |
-| 5b | Flash blanc + sifflement d'oreille (~0,5 s), coupe sèche | montage | ⏳ à faire |
-| 6 | Le calme d'après : même plan que le début, plus personne, cartons vides ; il est assis, posé, satisfait, des liasses de billets dans les mains (sans abuser), il reste comme ça | Seedance | ⏳ à faire |
+| 5b | ~~Flash blanc + sifflement~~ : abandonné, transition à trouver au montage | HyperFrames (Claude) | ⏳ |
+| 6 | Le calme d'après : même plan que le début, plus personne, cartons vides façon « après l'apocalypse » ; vue de côté, contre-jour ; sourire touché comme un cadeau (pas fier) ; quelques liasses | Seedance, `prompts/calme_seedance.json` | ⏳ à générer |
 | 7 | Flyer : Snap quatrepixel + Lyon 38/69 | HyperFrames | ⏳ à faire |
 
 Jeté : `clip_2_refais` après 3,0 s (les bécanes écrasent le stock et continuent tout droit ;
@@ -64,3 +64,8 @@ la fin avec la foule cagoulée est bien mais casse la cohérence), et `clip_2` a
 - Bécanes SANS PILOTE : le prompt ne disait jamais « avec un pilote dessus ».
 - Foule pas « mecs de quartier » : « flous » + description trop courte → foule générique.
 - Ils n'achètent pas, ne vident pas le stock : le prompt interdisait de toucher LE STAND (« totalement immobile », « personne ne touche »). Erreur : il veut qu'ils se jettent tous sur les cartons ET paient (billets tendus), et que le stock soit vidé d'un coup.
+
+## Montage final
+
+- Fait par Claude avec HyperFrames quand Sofiane envoie tous les clips.
+- Musique : un son de rap fourni par Sofiane.

@@ -1,0 +1,15 @@
+{
+"references": "@Image 1 = visage du VENDEUR. @Image 2 = tenue et silhouette du VENDEUR. @Image 3 = le décor et LE STAND.",
+"personnage": "Le jeune homme à peau mate, sourcils épais, courte barbe, bonnet noir surmonté de lunettes rondes est LE VENDEUR (visage @Image 1, tenue @Image 2) : lentilles C.P. Company sur les lunettes du bonnet, la manche gauche et la poche de cuisse gauche ; doudoune kaki brillante ouverte, pull vert sauge, cargo gris anthracite, baskets Mizuno noires.",
+"decor": "Décor de @Image 3 : esplanade en béton fissuré d'une cité au coucher du soleil, muret tagué et tours au fond. Plus personne, plus aucune moto : le calme après la tempête.",
+"stand": "La chaise noire et les cinq cartons de @Image 3 forment LE STAND, mais les cartons sont maintenant complètement vides : rabats arrachés, un carton renversé sur le côté, papiers et emballages déchirés éparpillés autour, traces de pneus noires sur le béton, poussière qui retombe lentement dans la lumière.",
+"geographie": "LE VENDEUR est assis sur sa chaise derrière les cartons vides. Le soleil couchant est juste derrière lui et l'entoure d'un halo doré. Devant lui, l'esplanade déserte.",
+"style": "LE VENDEUR en 3D style Pixar, décor photoréaliste, lumière dorée de fin de journée en contre-jour, rendu cinéma, ambiance douce et paisible.",
+"plan_1": {
+"camera": "Plan moyen pris au sol sur le côté gauche, à hauteur d'homme, caméra fixe. LE VENDEUR de trois quarts sur le tiers droit de l'image, de la tête aux genoux, il occupe la moitié de la hauteur ; les cartons vides au premier plan en bas ; le soleil couchant derrière lui.",
+"action": "D'abord il est immobile, calé dans sa chaise, deux ou trois liasses de billets en dollars dans les mains. Il baisse lentement les yeux sur les billets, puis relève la tête et regarde l'esplanade vide. Il souffle doucement. Ensuite seulement, un sourire sincère et touché monte lentement sur son visage, comme quelqu'un qui vient de recevoir un cadeau. Puis il reste immobile, posé, jusqu'à la fin.",
+"expression": "Regard doux, yeux qui brillent un peu, épaules relâchées, sourire bouche fermée ému et reconnaissant. Pas de fierté, pas de moquerie.",
+"son": "<vent léger> <papier qui glisse sur le béton>"
+},
+"contraintes": "Un seul personnage à l'écran. Cartons vides du début à la fin. Billets en dollars, quelques liasses seulement. Visage et tenue stables, mains réalistes. LE VENDEUR ne regarde jamais la caméra. Mouvements lents, aucun zoom. Aucune parole, aucune musique. Pas de sous-titres, pas de texte ajouté, pas de filigrane."
+}
