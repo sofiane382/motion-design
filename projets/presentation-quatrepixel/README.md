@@ -27,6 +27,7 @@ la fin avec la foule cagoulée est bien mais casse la cohérence), et `clip_2` a
 - Bécanes : 2-3 sautent par-dessus le muret du fond, quelques-unes sortent du passage à droite (couloir du bâtiment), quelques-unes passent à côté de la caméra. Toutes S'ARRÊTENT autour du stand.
 - Plan large : comme dans `16.9_clip_2` (caméra au ras du sol, très loin, lui petit au fond), mais en 9:16 → nouveau décor à faire d'abord (Seedance copie le cadrage du décor).
 - Raté dans `16.9_clip_2` : bécanes et gens vont tout droit, le dépassent et écrasent le stock ; parachutes arc-en-ciel (les vouloir NOIRS) ; les cagoulés se servent dans les cartons = on dirait un braquage. Il faut qu'ils ACHÈTENT : billets tendus vers lui, il encaisse, ils se battent pour acheter.
+- Ambiance : vraiment la street. Ça crie, saute, se bouscule, se rentre dedans, jette des trucs, arrive en roue arrière. Le chaos est AUTOUR ; LE VENDEUR et LE STAND restent stables et lisibles.
 - Doit finir serré sur lui entouré de mains, pour raccorder avec le plan AirPods (`references/raccord_airpods_debut.png`).
 
 ## Prompt Seedance
