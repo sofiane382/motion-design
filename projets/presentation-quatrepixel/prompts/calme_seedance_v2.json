@@ -1,0 +1,15 @@
+{
+"references": "@Image 1 = visage du VENDEUR. @Image 2 = tenue et silhouette du VENDEUR. @Image 3 = le décor et LE STAND.",
+"personnage": "Le jeune homme à peau mate, sourcils épais, courte barbe, bonnet noir surmonté de lunettes rondes est LE VENDEUR (visage @Image 1, tenue @Image 2) : lentilles C.P. Company sur les lunettes du bonnet, la manche gauche et la poche de cuisse gauche ; doudoune kaki brillante ouverte, pull vert sauge, cargo gris anthracite, baskets Mizuno noires. Adulte de taille normale.",
+"decor": "Décor de @Image 3 : esplanade en béton fissuré d'une cité au coucher du soleil, muret tagué, tours au fond. Plus personne, plus aucune moto : le calme juste après la tempête.",
+"stand": "LE STAND après le passage de la foule : la chaise de camping noire de @Image 3, de taille normale, et les cinq cartons de @Image 3, maintenant complètement vides. Les cartons sont posés par terre à un mètre du VENDEUR, à sa gauche et à sa droite, jamais devant son corps : deux renversés sur le côté, rabats ouverts. Autour, quelques emballages déchirés, une boîte d'AirPods vide, des traces de pneus noires sur le béton, de la poussière qui retombe dans la lumière.",
+"geographie": "LE VENDEUR est assis sur sa chaise au milieu de l'esplanade vide, tourné vers le muret du fond. Le soleil couchant est derrière lui, à gauche, en contre-jour doré.",
+"style": "LE VENDEUR en 3D style Pixar, décor photoréaliste, lumière dorée de fin de journée, rendu cinéma, scène naturelle comme si la caméra n'était pas là.",
+"plan_1": {
+"camera": "Plan large, caméra fixe à hauteur de poitrine, sur le côté gauche. LE VENDEUR vu de trois quarts, en entier de la tête aux pieds, décalé sur le tiers droit de l'image, il occupe un tiers de la hauteur de l'image. On voit la chaise entière, tous les cartons, beaucoup de sol vide autour et le ciel au-dessus de lui.",
+"action": "D'abord, LE VENDEUR est assis normalement sur la chaise, le dos contre le dossier, les deux pieds à plat sur le béton, trois liasses de billets en dollars dans les mains posées sur ses genoux. Il baisse lentement les yeux vers les billets. Ensuite seulement, il relève la tête vers l'esplanade vide et un grand sourire de joie franche apparaît. Puis il reste immobile, souriant, jusqu'à la fin.",
+"expression": "Sourcils levés, yeux qui brillent, joues relevées, grand sourire sincère avec les dents, comme un gamin content, épaules relâchées.",
+"son": "<vent léger> <papier qui glisse sur le béton>"
+},
+"contraintes": "Un seul personnage à l'écran. Le corps du VENDEUR ne traverse ni les cartons ni la chaise, ses pieds restent posés sur le sol, rien ne s'enfonce dans le béton. Proportions réalistes entre LE VENDEUR, la chaise et les cartons. Cartons vides du début à la fin. Visage et tenue stables, mains réalistes. LE VENDEUR ne regarde jamais la caméra. Mouvements lents, aucun zoom. Aucune parole, aucune musique. Pas de sous-titres, pas de texte ajouté, pas de filigrane."
+}
