@@ -14,7 +14,8 @@
 "plan_2": {
 "camera": "Coupe au sol, même axe que @Image 3 mais plus près, caméra fixe. LE VENDEUR debout derrière LE STAND, de la tête aux genoux, moitié de la hauteur de l'image ; les cartons en bas de l'image.",
 "action": "LA FOULE se jette sur LE STAND : ils se bousculent, se rentrent dedans, crient, plongent les mains dans les cartons et prennent sacoches, puffs, parfums, AirPods et casquettes ; en même temps chacun tend ses billets vers LE VENDEUR. Les cartons se vident d'un coup. Une casquette vole en l'air ; au fond, une cross fait une roue arrière.",
-"perso": "Bras grands ouverts, LE VENDEUR reçoit les billets qu'on lui fourre dans les mains : d'abord yeux écarquillés, bouche entrouverte de stupeur ; ensuite seulement un grand sourire. Puis il reste immobile, les mains pleines de billets."
+"perso": "Bras grands ouverts, LE VENDEUR reçoit les billets qu'on lui fourre dans les mains : d'abord yeux écarquillés, bouche entrouverte de stupeur ; ensuite seulement un grand sourire. Puis il reste immobile, les mains pleines de billets.",
+"son": "<cris de foule sans mots> <cartons qui craquent>"
 },
 "contraintes": "Chaque moto et chaque scooter qui roule a un pilote dessus. Personne ne renverse ni n'écrase LE STAND. C'est un achat, pas un vol : chaque client paie LE VENDEUR. Billets en dollars, tenus dans les mains. Parachutes uniquement noirs. Seul LE VENDEUR a un visage net. Visage et tenue stables, mains réalistes. LE VENDEUR ne regarde jamais la caméra. Aucun zoom. Aucune parole, aucune musique. Pas de sous-titres, pas de texte ajouté, pas de filigrane."
 }
