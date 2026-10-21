@@ -163,3 +163,11 @@ Logo « Ai » à recadrer sur clips 1, 2, 3, 5, 6 et sur le flyer.
 - « LYON · 38 · 69 ».
 - PAS de liste de commerces, PAS de délai, PAS de prix.
 - Typo : pas de police banale. Rendu très clean, beau, attirant (titre gras condensé avec effet, hiérarchie nette, peu de texte).
+
+## Zbeul : à refaire (retour sur `clip_4`)
+
+- Pas assez « zbeul », pas assez de monde.
+- Bécanes : elles doivent arriver du côté de la caméra ET un peu d'en face. Là, seulement d'en face.
+- Foule floue, bizarre, on ne comprend pas ce que c'est. Cause : mon prompt imposait « la foule reste floue ».
+- Pas des jeunes maghrébins / arabes de cité comme voulu. Il veut de vrais jeunes du quartier, typés.
+- Tout le monde a la même tenue : il faut des tenues variées.
