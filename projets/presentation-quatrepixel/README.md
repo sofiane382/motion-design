@@ -76,3 +76,18 @@ la fin avec la foule cagoulée est bien mais casse la cohérence), et `clip_2` a
 - Il passe à travers les cartons, s'enfonce dans le sol, chaise minuscule, il paraît tout petit, carton bizarre.
 - Sourire pas aimé. Choix validé : JOIE FRANCHE, grand sourire avec les dents, yeux qui brillent, content comme un gamin.
 - À corriger : plan large (en entier, un tiers de la hauteur), cartons à un mètre de lui sur les côtés (jamais devant son corps), pieds à plat, chaise taille normale, cartons simples vides et renversés.
+
+## Clips finaux reçus (22:41) — analyse
+
+Tous en 2160x3840 (9:16, 4K), avec leur son. Le son des clips est GARDÉ ; Sofiane ajoute la musique dans CapCut ; Claude ajoute un son « Desert Cowboy » (western) fourni par Sofiane.
+
+| Fichier | Durée | i/s | Contenu | Coupes | Logo « Ai » |
+|---|---|---|---|---|---|
+| `clip_1-1.mp4` | 8,55 s | 60 | Le calme, plan large, boule de foin qui arrive et finit en gros plan devant la caméra | aucune | oui, haut gauche |
+| `clip_2-1.mp4` | 6,00 s | 30 | Il s'ennuie, prend son tel, puis gros plan surpris → sourire | 3,13 s | oui |
+| `clip_3-1.mp4` | 2,55 s | 30 | Il tape sur son tel, lève la tête, sourit | aucune | oui |
+| `clip_4-1.mp4` | 6,04 s | 30 | Zbeul : vue fenêtre (cross, parachutes noirs, foule) puis coupe au sol, la foule vide les cartons, il a les bras ouverts | 3,33 s | non |
+| `clip_5-1.mp4` | 3,20 s | 30 | AirPods + billets, gros plan, surpris → grand sourire | (mouvements rapides, pas de vraie coupe) | oui |
+
+Total : 26,35 s sans le calme ni le flyer → il faudra raccourcir (règle ≤ 25 s).
+Volumes moyens : clip_1 -44 dB, clip_2 -50 dB (quasi muets), clip_3 -28 dB, clip_4 -18 dB, clip_5 -16 dB.
