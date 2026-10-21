@@ -33,8 +33,7 @@ la fin avec la foule cagoulée est bien mais casse la cohérence), et `clip_2` a
 
 ## Prompt Seedance
 
-Pas encore écrit : on valide d'abord l'idée et la durée (skill pub-virale-seedance).
-Le prompt sera en JSON, en français, sans secondes, et passera le garde-fou.
+`prompts/zbeul_seedance.json` — Images : 1 = `1_visage_vendeur.jpg`, 2 = `2_en_pied_vendeur.jpg`, 3 = `3_decor_stand.jpg`. Réglages : 9:16, 8 s (x1,25 au montage), Seedance 2.0 normale, Référence de tout type, son activé, sous-titres décochés.
 
 ## Points à régler avant le prompt
 
