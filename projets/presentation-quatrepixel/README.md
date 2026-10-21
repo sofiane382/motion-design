@@ -110,5 +110,7 @@ Volumes moyens : clip_1 -44 dB, clip_2 -50 dB (quasi muets), clip_3 -28 dB, clip
 | 6 | Coupe sèche → le calme d'après | `clip_6-1` 0,0 → 3,0 s | x1 | 3,0 s |
 | 7 | Flyer : image fixe, Snapcode incrusté dans l'écran vert, léger zoom avant | image | — | 2,5 s |
 
-Son : sons des clips gardés. `cowboy-standoff.mp3` sous les plans 1-2-3 (ambiance western, la boule de foin), coupé net au début du zbeul (les motos prennent le relais) ; il revient d'un coup sur la coupe sèche 5 → 6 et continue sous le flyer, avec un fondu de sortie. Sofiane ajoute sa musique rap dans CapCut ensuite.
+Son : sons des clips gardés. ANNULÉ : le son western (`cowboy-standoff.mp3`), Sofiane gère toute la musique dans CapCut.
+
+À AJOUTER (HyperFrames) : la séquence Snap. Quand il est sur son téléphone, on voit l'écran Snap : Quatrepixel lui envoie « ton flyer est terminé… » (texte à choisir), puis il le met en story. Très court.
 Logo « Ai » : recadré sur tous les plans et le flyer (léger zoom ~6 %).
