@@ -163,3 +163,11 @@ Logo « Ai » à recadrer sur clips 1, 2, 3, 5, 6 et sur le flyer.
 - « LYON · 38 · 69 ».
 - PAS de liste de commerces, PAS de délai, PAS de prix.
 - Typo : pas de police banale. Rendu très clean, beau, attirant (titre gras condensé avec effet, hiérarchie nette, peu de texte).
+
+## ✅ Montage final livré (HyperFrames)
+
+- Vidéo : `export/quatrepixel_presentation.mp4` — 1080x1920, 30 i/s, H.264 + AAC 48 kHz stéréo, **31,8 s**, sons des clips + sons Snap, sans musique (pic -3,6 dB).
+- Projet : `montage/hyperframes/` (`index.html` = montage et transitions ; `compositions/snap1.html`, `snap2.html`, `flyer.html`).
+- Préparation (à relancer dans l'ordre si une source change) : `montage/scripts/1_preparer_clips.sh` (coupes, vitesses image + son, logo « Ai » retiré, ambiance des plans calmes remontée), `2_preparer_flyer.py` (Snapcode incrusté en perspective dans l'écran vert), `3_preparer_snap.py` (avatar, emojis, sons ding / swoosh / clics / ticks).
+- Rendu : `cd montage/hyperframes && npx hyperframes@0.8.185 render -q high -f 30 -o ../../export/quatrepixel_presentation.mp4`.
+- Durée : la somme des plans du tableau v3 fait 33,7 s (et non 31) ; les transitions se chevauchent (≈ 0,2-0,4 s chacune) pour tomber à 31,8 s.

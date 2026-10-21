@@ -1,0 +1,91 @@
+<!-- Écran Snap, partie 1 (3,8 s) : Quatrepixel écrit… « Ton flyer est prêt 🔥 », écrit… « Mets-le en story ».
+     Les sons (dings) sont dans assets/snap/snap1_sons.wav, calés sur les mêmes temps (0,9 s et 2,6 s). -->
+<template>
+  <style>
+    @font-face { font-family: "Archivo"; font-weight: 500; src: url("assets/fonts/archivo-latin-500-normal.woff2"); }
+    @font-face { font-family: "Archivo"; font-weight: 700; src: url("assets/fonts/archivo-latin-700-normal.woff2"); }
+    @font-face { font-family: "Archivo"; font-weight: 800; src: url("assets/fonts/archivo-latin-800-normal.woff2"); }
+    #root { position: absolute; inset: 0; overflow: hidden; background: #ffffff; font-family: "Archivo", sans-serif; color: #141414; }
+    .sn-ecran { position: absolute; inset: 0; background: #ffffff; }
+    .sn-tete { position: absolute; left: 0; top: 0; width: 1080px; height: 255px; border-bottom: 3px solid #e6e6e6; }
+    .sn-retour { position: absolute; left: 44px; top: 112px; width: 44px; height: 70px; }
+    .sn-av { position: absolute; left: 120px; top: 92px; width: 114px; height: 114px; }
+    .sn-nom { position: absolute; left: 262px; top: 100px; font-size: 52px; font-weight: 800; letter-spacing: -0.5px; }
+    .sn-etat { position: absolute; left: 262px; top: 166px; font-size: 33px; font-weight: 500; color: #8c8c8c; }
+    .sn-vue { position: absolute; left: 0; top: 258px; width: 1080px; bottom: 240px; overflow: hidden; }
+    .sn-pile { position: absolute; left: 0; bottom: 0; width: 1080px; }
+    .sn-label { position: relative; height: 96px; }
+    .sn-label span { position: absolute; left: 60px; bottom: 12px; font-size: 36px; font-weight: 800; letter-spacing: 1px; }
+    .sn-ligne { position: relative; height: 90px; }
+    .sn-ligne::before { content: ""; position: absolute; left: 60px; top: 0; bottom: 0; width: 7px; border-radius: 2px; background: var(--c); }
+    .sn-ligne span { position: absolute; left: 96px; top: 12px; font-size: 58px; font-weight: 500; white-space: nowrap; display: flex; align-items: center; gap: 16px; }
+    .sn-ligne img { width: 62px; height: 62px; }
+    .qp { --c: #f23c57; color: #f23c57; }
+    .moi { --c: #0eadff; color: #0eadff; }
+    .sn-ecrit { position: absolute; left: 0; bottom: 0; width: 1080px; height: 165px; }
+    .sn-ecrit img { position: absolute; left: 60px; top: 38px; width: 96px; height: 96px; }
+    .sn-bulle { position: absolute; left: 176px; top: 50px; width: 186px; height: 76px; border-radius: 38px; background: #eeeef2; }
+    .sn-point { position: absolute; top: 26px; width: 24px; height: 24px; border-radius: 12px; background: #9a9aa0; }
+    .sn-champ { position: absolute; left: 45px; right: 45px; bottom: 75px; height: 112px; border-radius: 56px; background: #f2f2f5; }
+    .sn-ph { position: absolute; left: 60px; top: 0; line-height: 112px; font-size: 42px; font-weight: 500; color: #96969b; }
+    #s1-l1, #s1-m1, #s1-m2, #s1-ecrit, #s1-etat-instant { opacity: 0; }
+  </style>
+  <div id="root" data-composition-id="snap1" data-width="1080" data-height="1920">
+    <div id="s1-ecran" class="sn-ecran clip" data-start="0" data-duration="3.8" data-track-index="0">
+      <div class="sn-tete" data-layout-allow-overlap>
+        <svg class="sn-retour" viewBox="0 0 44 70"><path d="M36 6 L8 35 L36 64" fill="none" stroke="#2a2a2a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <img class="sn-av" src="assets/snap/avatar.png" alt="" />
+        <div class="sn-nom">Quatrepixel</div>
+        <div id="s1-etat-ecrit" class="sn-etat">en train d'écrire…</div>
+        <div id="s1-etat-instant" class="sn-etat">à l'instant</div>
+      </div>
+      <div class="sn-vue">
+        <div id="s1-pile" class="sn-pile">
+          <div id="s1-l1" class="sn-label qp"><span>QUATREPIXEL</span></div>
+          <div id="s1-m1" class="sn-ligne qp"><span style="color:#141414">Ton flyer est prêt <img src="assets/snap/feu.png" alt="" /></span></div>
+          <div id="s1-m2" class="sn-ligne qp"><span style="color:#141414">Mets-le en story</span></div>
+        </div>
+        <div id="s1-ecrit" class="sn-ecrit">
+          <img src="assets/snap/avatar.png" alt="" />
+          <div class="sn-bulle">
+            <div id="s1-p0" class="sn-point" style="left: 39px"></div>
+            <div id="s1-p1" class="sn-point" style="left: 81px"></div>
+            <div id="s1-p2" class="sn-point" style="left: 123px"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sn-champ"><div class="sn-ph">Envoyer un chat</div></div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const ECRIT = 165, LABEL = 96, LIGNE = 90;
+      // Pile ancrée en bas : y = hauteur des messages pas encore arrivés, moins la place de « en train d'écrire ».
+      const arrive = (t, ids, y) => {
+        tl.to("#s1-pile", { y: y, duration: 0.16, ease: "power2.out" }, t);
+        ids.forEach((id) => tl.fromTo(id, { opacity: 0 }, { opacity: 1, duration: 0.16, ease: "power1.out", immediateRender: false }, t));
+      };
+      const ecrit = (t0, t1, y) => {
+        tl.to("#s1-pile", { y: y, duration: 0.16, ease: "power2.out" }, t0);
+        tl.fromTo("#s1-ecrit", { opacity: 0 }, { opacity: 1, duration: 0.12, immediateRender: false }, t0);
+        tl.to("#s1-ecrit", { opacity: 0, duration: 0.08 }, t1 - 0.04);
+        tl.set("#s1-etat-ecrit", { opacity: 1 }, t0).set("#s1-etat-instant", { opacity: 0 }, t0);
+        tl.set("#s1-etat-ecrit", { opacity: 0 }, t1).set("#s1-etat-instant", { opacity: 1 }, t1);
+        // Les 3 points pulsent l'un après l'autre.
+        for (let t = t0, k = 0; t < t1 - 0.1; t += 0.13, k++) {
+          const p = "#s1-p" + (k % 3);
+          tl.to(p, { scale: 1.25, backgroundColor: "#55555b", duration: 0.13, ease: "sine.out" }, t);
+          tl.to(p, { scale: 1, backgroundColor: "#9a9aa0", duration: 0.2, ease: "sine.in" }, t + 0.13);
+        }
+      };
+      gsap.set("#s1-pile", { y: LABEL + 2 * LIGNE - ECRIT });
+      ecrit(0, 0.9, LABEL + 2 * LIGNE - ECRIT);
+      arrive(0.9, ["#s1-l1", "#s1-m1"], LIGNE);
+      ecrit(1.9, 2.6, LIGNE - ECRIT);
+      arrive(2.6, ["#s1-m2"], 0);
+      tl.to({}, { duration: 0.01 }, 3.79);
+      window.__timelines["snap1"] = tl;
+    })();
+  </script>
+</template>

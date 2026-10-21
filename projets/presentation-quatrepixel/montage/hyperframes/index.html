@@ -1,0 +1,158 @@
+<!doctype html>
+<!-- Montage final « Présentation Quatrepixel » (1080x1920, 30 i/s, ≈ 31,8 s).
+     Les plans vidéo sont préparés par ../scripts/1_preparer_clips.sh (coupe, vitesse, logo « Ai » retiré).
+     Chaque plan est dans un « cadre » (.cam) non minuté que GSAP bouge pour les transitions. -->
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/vendor/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+      .fond { position: absolute; inset: 0; background: #000; }
+      .cam { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; will-change: transform; }
+      .cam video { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+      .snapcadre { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; overflow: hidden; }
+      .lumiere { position: absolute; inset: 0; pointer-events: none;
+        background: radial-gradient(120% 80% at 50% 40%, rgba(255, 236, 196, 0.95) 0%, rgba(255, 200, 150, 0.55) 55%, rgba(255, 180, 140, 0.25) 100%); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="31.77" data-width="1080" data-height="1920">
+      <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+        <defs>
+          <filter id="flou1" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur id="fb1" stdDeviation="0 0" /></filter>
+          <filter id="flou2" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur id="fb2" stdDeviation="0 0" /></filter>
+          <filter id="flou4" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur id="fb4" stdDeviation="0 0" /></filter>
+          <filter id="flou5" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur id="fb5" stdDeviation="0 0" /></filter>
+          <filter id="flou6" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur id="fb6" stdDeviation="0 0" /></filter>
+          <filter id="flou7" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur id="fb7" stdDeviation="0 0" /></filter>
+          <filter id="flou8" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur id="fb8" stdDeviation="0 0" /></filter>
+        </defs>
+      </svg>
+      <div class="fond"></div>
+
+      <!-- 1. Le calme, la boule de foin (clip_1 x1,9) -->
+      <div id="cam1" class="cam" style="z-index: 1; filter: url(#flou1)">
+        <video id="v1" class="clip" src="assets/plans/p01_calme.mp4" data-start="0" data-duration="4.488" data-track-index="1" data-has-audio="true" data-fade-out="0.25" playsinline></video>
+      </div>
+      <!-- 2. Il s'ennuie, prend son tel (clip_2 0 → 3,13 s, x1,25) -->
+      <div id="cam2" class="cam" style="z-index: 2; filter: url(#flou2)">
+        <video id="v2" class="clip" src="assets/plans/p02_ennui.mp4" data-start="4.238" data-duration="2.5" data-track-index="2" data-has-audio="true" data-fade-in="0.15" data-fade-out="0.3" playsinline></video>
+      </div>
+      <!-- 3. Écran Snap, partie 1 -->
+      <div id="snapcadre1" class="snapcadre" style="z-index: 3">
+        <div id="snap1" data-composition-id="snap1" data-composition-src="compositions/snap1.html" data-start="6.438" data-duration="3.8" data-track-index="3" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+      </div>
+      <!-- 4. Gros plan : il lit, surpris → sourire (clip_2 3,13 s → fin) -->
+      <div id="cam4" class="cam" style="z-index: 2; filter: url(#flou4)">
+        <video id="v4" class="clip" src="assets/plans/p04_lecture.mp4" data-start="9.988" data-duration="2.825" data-track-index="2" data-has-audio="true" data-fade-in="0.2" data-fade-out="0.3" playsinline></video>
+      </div>
+      <!-- 5. Écran Snap, partie 2 -->
+      <div id="snapcadre2" class="snapcadre" style="z-index: 4; filter: url(#flou5)">
+        <div id="snap2" data-composition-id="snap2" data-composition-src="compositions/snap2.html" data-start="12.513" data-duration="3.6" data-track-index="3" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+      </div>
+      <!-- 6. Il lève la tête et sourit (clip_3 1,0 s → fin, x1,25) -->
+      <div id="cam6" class="cam" style="z-index: 5; filter: url(#flou6)">
+        <video id="v6" class="clip" src="assets/plans/p06_tete.mp4" data-start="15.913" data-duration="1.233" data-track-index="1" data-has-audio="true" data-fade-in="0.15" playsinline></video>
+      </div>
+      <!-- 7. LE ZBEUL (clip_4) : coupe sèche + tremblement -->
+      <div id="cam7" class="cam" style="z-index: 6; filter: url(#flou7)">
+        <video id="v7" class="clip" src="assets/plans/p07_zbeul.mp4" data-start="17.146" data-duration="6.033" data-track-index="2" data-has-audio="true" data-volume="0.79" data-fade-out="0.2" playsinline></video>
+      </div>
+      <!-- 8. AirPods + billets (clip_5) -->
+      <div id="cam8" class="cam" style="z-index: 7; filter: url(#flou8)">
+        <video id="v8" class="clip" src="assets/plans/p08_airpods.mp4" data-start="22.979" data-duration="3.19" data-track-index="1" data-has-audio="true" data-volume="0.79" data-fade-in="0.12" playsinline></video>
+      </div>
+      <!-- 9. Coupe sèche → le calme d'après (clip_6 0 → 3,5 s) -->
+      <div id="cam9" class="cam" style="z-index: 8">
+        <video id="v9" class="clip" src="assets/plans/p09_calme_apres.mp4" data-start="26.169" data-duration="3.5" data-track-index="2" data-has-audio="true" data-fade-out="0.4" playsinline></video>
+      </div>
+      <!-- 10. Flyer de fin -->
+      <div id="flyercadre" class="snapcadre" style="z-index: 9">
+        <div id="flyer" data-composition-id="flyer" data-composition-src="compositions/flyer.html" data-start="29.269" data-duration="2.5" data-track-index="3" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+      </div>
+      <div id="lumiere" class="lumiere" style="z-index: 10"></div>
+
+      <!-- Sons des écrans Snap (dings, clics, swoosh, ticks) -->
+      <audio id="sons-snap1" class="clip" src="assets/snap/snap1_sons.wav" data-start="6.438" data-duration="3.8" data-track-index="5" data-volume="1"></audio>
+      <audio id="sons-snap2" class="clip" src="assets/snap/snap2_sons.wav" data-start="12.513" data-duration="3.6" data-track-index="6" data-volume="1"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const W = 1080, H = 1920;
+
+      // Flou de mouvement : un proxy par filtre SVG, réécrit à chaque image (déterministe au seek).
+      const flou = (n, axe) => {
+        const p = { v: 0 }, node = document.getElementById("fb" + n);
+        const ecrire = () => node.setAttribute("stdDeviation", axe === "x" ? p.v + " 0" : axe === "y" ? "0 " + p.v : p.v + " " + p.v);
+        ecrire();
+        return (t, d, pic) => {
+          tl.to(p, { v: pic, duration: d / 2, ease: "power2.in", onUpdate: ecrire }, t);
+          tl.to(p, { v: 0, duration: d / 2, ease: "power2.out", onUpdate: ecrire }, t + d / 2);
+        };
+      };
+
+      gsap.set([".cam", ".snapcadre"], { x: 0, y: 0, scale: 1, opacity: 1 });
+      gsap.set("#lumiere", { opacity: 0 });
+
+      // 1 → 2 : zoom punch vers lui avec flou (0,25 s).
+      tl.fromTo("#cam1", { scale: 1, transformOrigin: "46% 30%" }, { scale: 1.45, duration: 0.25, ease: "power3.in" }, 4.238);
+      flou(1, "y")(4.238, 0.3, 14);
+      tl.fromTo("#cam2", { opacity: 0, scale: 1.18, transformOrigin: "50% 35%" }, { opacity: 1, duration: 0.12, ease: "none", immediateRender: false }, 4.3);
+      tl.fromTo("#cam2", { scale: 1.18 }, { scale: 1, duration: 0.45, ease: "expo.out", immediateRender: false }, 4.3);
+      flou(2, "y")(4.25, 0.3, 10);
+
+      // 2 → 3 : zoom dans le téléphone, l'écran Snap grandit depuis le tel (0,3 s).
+      tl.fromTo("#cam2", { scale: 1, transformOrigin: "45% 54%" }, { scale: 2.4, duration: 0.3, ease: "power3.in", immediateRender: false }, 6.438);
+      flou(2, "xy")(6.45, 0.3, 8);
+      tl.fromTo("#snapcadre1", { scale: 0.09, x: -50, y: 70, borderRadius: 120, opacity: 0 },
+        { scale: 1, x: 0, y: 0, borderRadius: 0, opacity: 1, duration: 0.3, ease: "power3.inOut" }, 6.438);
+
+      // 3 → 4 : l'écran Snap se rétracte vers le tel du gros plan, zoom arrière (0,25 s).
+      tl.fromTo("#cam4", { scale: 1.3, transformOrigin: "51% 80%" }, { scale: 1, duration: 0.5, ease: "expo.out", immediateRender: false }, 9.988);
+      tl.to("#snapcadre1", { scale: 0.12, x: 10, y: 580, borderRadius: 140, duration: 0.25, ease: "power3.in" }, 9.988);
+      tl.to("#snapcadre1", { opacity: 0, duration: 0.1, ease: "none" }, 10.138);
+      flou(4, "xy")(9.988, 0.3, 8);
+
+      // 4 → 5 : de nouveau dans le téléphone (0,3 s).
+      tl.fromTo("#cam4", { scale: 1, transformOrigin: "51% 80%" }, { scale: 2.2, duration: 0.3, ease: "power3.in", immediateRender: false }, 12.513);
+      tl.fromTo("#snapcadre2", { scale: 0.11, x: 10, y: 600, borderRadius: 120, opacity: 0 },
+        { scale: 1, x: 0, y: 0, borderRadius: 0, opacity: 1, duration: 0.3, ease: "power3.inOut" }, 12.513);
+
+      // 5 → 6 : whip pan vertical vers le haut (0,2 s) : l'écran file vers le bas, le plan arrive du haut.
+      tl.fromTo("#snapcadre2", { y: 0 }, { y: H, duration: 0.2, ease: "power3.inOut", immediateRender: false }, 15.913);
+      tl.fromTo("#cam6", { y: -H }, { y: 0, duration: 0.2, ease: "power3.inOut" }, 15.913);
+      flou(5, "y")(15.913, 0.2, 40);
+      flou(6, "y")(15.913, 0.32, 40);
+
+      // 6 → 7 : IMPACT. Coupe sèche, zoom punch + tremblement (0,3 s).
+      tl.fromTo("#cam7", { scale: 1.16, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.32, ease: "power3.out" }, 17.146);
+      [[-26, 16, 0.6], [22, -18, -0.5], [-15, 11, 0.35], [10, -6, -0.2], [-4, 3, 0.1], [0, 0, 0]].forEach(([x, y, r], i) => {
+        tl.to("#cam7", { x: x, y: y, rotation: r, duration: 0.05, ease: "sine.inOut" }, 17.146 + i * 0.05);
+      });
+      flou(7, "xy")(17.146, 0.16, 5);
+
+      // 7 → 8 : whip pan horizontal (0,2 s).
+      tl.fromTo("#cam7", { x: 0 }, { x: -W, duration: 0.2, ease: "power3.inOut", immediateRender: false }, 22.979);
+      tl.fromTo("#cam8", { x: W }, { x: 0, duration: 0.2, ease: "power3.inOut" }, 22.979);
+      flou(7, "x")(22.979, 0.2, 40);
+      flou(8, "x")(22.979, 0.3, 40);
+
+      // 8 → 9 : COUPE SÈCHE, sans effet (le gag).
+
+      // 9 → 10 : le calme glisse vers le flyer, fondu court et lumineux (0,4 s).
+      tl.fromTo("#cam9", { x: 0, scale: 1 }, { x: -160, scale: 1.06, duration: 0.4, ease: "power2.in" }, 29.269);
+      tl.fromTo("#flyercadre", { opacity: 0, x: 160, scale: 1.06 }, { opacity: 1, x: 0, scale: 1, duration: 0.4, ease: "power2.out" }, 29.269);
+      tl.fromTo("#lumiere", { opacity: 0 }, { opacity: 0.45, duration: 0.18, ease: "power2.in", immediateRender: false }, 29.269);
+      tl.to("#lumiere", { opacity: 0, duration: 0.3, ease: "power2.out" }, 29.449);
+
+      tl.to({}, { duration: 0.01 }, 31.76);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
