@@ -91,3 +91,24 @@ Tous en 2160x3840 (9:16, 4K), avec leur son. Le son des clips est GARDÉ ; Sofia
 
 Total : 26,35 s sans le calme ni le flyer → il faudra raccourcir (règle ≤ 25 s).
 Volumes moyens : clip_1 -44 dB, clip_2 -50 dB (quasi muets), clip_3 -28 dB, clip_4 -18 dB, clip_5 -16 dB.
+
+## Reçus aussi (22:44)
+
+- `clip_6-1.mp4` : 4,07 s, 2160x3840, 30 i/s. Le calme d'après : plan large, il est assis en entier, pieds au sol, cartons vides autour, billets dans les mains, sourire qui monte. Logo « Ai » à vérifier. Bon.
+- `cowboy-standoff.mp3` : 19,2 s, musique western continue (~-16 dB), sans silence ni pic.
+- Flyer : image fixe 9:16 du VENDEUR debout, cartons vides, liasse de dollars, téléphone à écran VERT tendu vers nous (écran incliné, coin haut gauche ≈ (190,440), coin bas droit ≈ (355,750) sur 1116x2000). Logo « Ai » en haut à gauche. Fichier à récupérer (pas encore sur le disque).
+
+## Scénario de montage proposé (≈ 25 s)
+
+| # | Plan | Source et coupe | Vitesse | Durée finale |
+|---|---|---|---|---|
+| 1 | Le calme, la boule de foin | `clip_1-1` 0,0 → 8,55 s | x1,6 | 5,3 s |
+| 2 | Il s'ennuie, prend son tel, gros plan surpris → sourire | `clip_2-1` 1,0 → 6,0 s | x1,2 | 4,2 s |
+| 3 | Il tape sur son tel, lève la tête, sourit | `clip_3-1` entier | x1,25 | 2,0 s |
+| 4 | LE ZBEUL : vue fenêtre puis coupe au sol | `clip_4-1` entier | x1 | 6,0 s |
+| 5 | AirPods + billets | `clip_5-1` entier | x1,25 | 2,6 s |
+| 6 | Coupe sèche → le calme d'après | `clip_6-1` 0,0 → 3,0 s | x1 | 3,0 s |
+| 7 | Flyer : image fixe, Snapcode incrusté dans l'écran vert, léger zoom avant | image | — | 2,5 s |
+
+Son : sons des clips gardés. `cowboy-standoff.mp3` sous les plans 1-2-3 (ambiance western, la boule de foin), coupé net au début du zbeul (les motos prennent le relais) ; il revient d'un coup sur la coupe sèche 5 → 6 et continue sous le flyer, avec un fondu de sortie. Sofiane ajoute sa musique rap dans CapCut ensuite.
+Logo « Ai » : recadré sur tous les plans et le flyer (léger zoom ~6 %).
