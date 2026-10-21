@@ -2,7 +2,7 @@
 
 Bibliothèque de prompts pour générer des vidéos de motion design avec des modèles
 texte→vidéo et image→vidéo (Kling 3.0 Pro, MiniMax H3 Max, FLUX 3, Gemini Omni…),
-utilisables dans FLORA, Higgsfield ou tout autre outil de génération.
+utilisables dans FLORA ou tout autre outil de génération.
 
 ## Structure
 
