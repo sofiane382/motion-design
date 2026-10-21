@@ -68,7 +68,7 @@ la fin avec la foule cagoulée est bien mais casse la cohérence), et `clip_2` a
 ## Montage final
 
 - Fait par Claude avec HyperFrames quand Sofiane envoie tous les clips.
-- Musique : un son de rap fourni par Sofiane.
+- Musique : Sofiane ajoute lui-même son rap dans CapCut après le montage. Le montage HyperFrames sort SANS musique.
 
 ## Plan calme, essai 1 : retour
 
