@@ -1,0 +1,28 @@
+{
+  "references": "@Image 1 = le visage du VENDEUR. @Image 2 = la tenue et la silhouette du VENDEUR. @Image 3 = le décor exact de la vidéo et son cadrage, avec LE STAND.",
+  "personnage": {
+    "definition": "Le jeune homme à la peau mate, aux sourcils épais et à la courte barbe, avec un bonnet noir surmonté de lunettes rondes, est LE VENDEUR : son visage vient de @Image 1, sa tenue et sa silhouette de @Image 2.",
+    "tenue": "Doudoune matelassée kaki brillante à capuche, ouverte, avec un badge rond noir à lentille sur la manche gauche ; pull côtelé vert sauge ; ceinture noire ; pantalon cargo gris anthracite avec une lentille ronde sur la poche de la cuisse gauche ; baskets noires à grosse semelle sculptée. Tenue identique dans tous les plans."
+  },
+  "decor": "La scène se passe dans le décor de @Image 3, utilisé tel quel, sans rien changer : la grande esplanade en béton fissuré de la cité, le muret tagué au fond, les mêmes tours, le même ciel de coucher de soleil.",
+  "produits": "La chaise de camping noire et les cinq cartons ouverts de @Image 3 forment LE STAND : sacoches noires à motif monogramme gris, boîtes de puffs aux couleurs pastel, flacons de parfum, boîtes blanches d'AirPods, casquettes de luxe. LE STAND reste exactement comme sur @Image 3 : même place au milieu de l'esplanade, mêmes articles, mêmes couleurs.",
+  "geographie": "LE VENDEUR est assis sur la chaise juste derrière les cartons, au milieu de l'esplanade. Devant LE STAND, une grande zone de sol vide jusqu'à la caméra. Derrière lui, quelques mètres de sol puis le muret du fond ; à droite, le rez-de-chaussée d'un immeuble avec un passage ouvert. Le soleil couchant est au fond à gauche, en contre-jour.",
+  "style": "LE VENDEUR et la foule en 3D style film d'animation Pixar, décor photoréaliste identique à @Image 3, lumière dorée de fin de journée, poussière dans l'air, rendu cinéma haute définition.",
+  "plan_1": {
+    "camera": "Plan large, exactement le même cadrage et le même point de vue que @Image 3, caméra fixe. LE VENDEUR et LE STAND restent au milieu de l'image, à la même taille que sur @Image 3.",
+    "action": "D'abord, trois motos cross rouges et blanches type Honda CRF sautent par-dessus le muret du fond et retombent derrière LE STAND, puis s'arrêtent en dérapant sur le sol entre le muret et la chaise. En même temps, des maxi-scooters gris mat type Yamaha TMAX sortent en roue arrière du passage de l'immeuble de droite et s'arrêtent sur le côté droit du STAND. Ensuite, d'autres motos entrent par les bords gauche et droit de l'image et s'arrêtent en ligne sur le sol vide devant LE STAND, roue avant vers les cartons, à deux mètres d'eux. Dans le ciel, des parachutes noirs descendent entre les tours. Une foule de jeunes accourt de tous les côtés et s'arrête autour du STAND.",
+    "perso": "LE VENDEUR se redresse sur sa chaise, les yeux grands ouverts et la bouche ouverte de surprise, il tourne la tête d'un côté à l'autre pour regarder tout le monde arriver.",
+    "son": "<moteurs de motos qui hurlent> <crissements de pneus> <clameur de foule qui monte, sans mots distincts>"
+  },
+  "plan_2": {
+    "camera": "Coupe en plan moyen, caméra fixe à hauteur de poitrine, légèrement sur le côté : LE VENDEUR de trois quarts sur le tiers gauche de l'image, il occupe la moitié de la hauteur ; LE STAND en bas de l'image.",
+    "action": "Autour et derrière LE VENDEUR, c'est le chaos de la street : des jeunes du quartier, environ un tiers en cagoule noire, les autres à visage découvert flou avec casquettes, coupes dégradées et survêtements de couleur, crient, sautent, se bousculent et se rentrent dedans, l'un lance une casquette en l'air ; derrière eux une moto cross fait une roue arrière dans la fumée. Tous agitent des billets en euros, des billets orange de 50 euros et bleus de 20 euros, vers LE VENDEUR.",
+    "expression": "LE VENDEUR se lève d'un bond, lève les deux bras au-dessus de la tête, la bouche grande ouverte en un cri de joie silencieux, les yeux brillants, il n'en revient pas."
+  },
+  "plan_3": {
+    "camera": "Coupe en plan rapproché à la taille, caméra fixe, LE VENDEUR de trois quarts sur le tiers droit de l'image, il occupe les deux tiers de la hauteur ; la foule floue derrière lui.",
+    "action": "Des dizaines de mains entrent dans l'image de tous les côtés et tendent des billets en euros vers LE VENDEUR. Il attrape les billets à pleines mains, puis tend une boîte blanche d'AirPods à une main qui la prend. Les clients paient d'abord, ensuite seulement ils reçoivent l'article. À la fin, LE VENDEUR reste immobile, débordé, les deux mains pleines de billets.",
+    "expression": "Il rit, débordé, les sourcils levés, les yeux qui passent d'une main à l'autre, comme s'il ne pouvait pas suivre tellement il y a de clients."
+  },
+  "contraintes": "Le décor et le cadrage de @Image 3 ne changent pas. Personne ne touche, ne renverse ni n'écrase LE STAND ; aucune moto ni aucune personne ne traverse LE STAND : tout le monde s'arrête autour. C'est un achat, pas un vol : billets en euros visibles à chaque plan, jamais de dollars. Parachutes uniquement noirs. Un seul visage net : LE VENDEUR ; la foule reste floue. Visage et tenue du VENDEUR stables, sans déformation, mains réalistes. LE VENDEUR ne regarde jamais la caméra. Aucun zoom. Aucune parole, aucune musique. Pas de sous-titres, pas de texte ajouté, pas de filigrane."
+}
