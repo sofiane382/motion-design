@@ -10,9 +10,11 @@ Format : vertical 9:16, 720x1280, 24 i/s. Clips générés avec Seedance (CapCut
 | 2 | Plan sur lui, il s'ennuie, prend son tel | `clip_1_rater` à partir de **2,04 s** (6 s) | ✅ monté par Sofiane |
 | 3 | Notif Snapchat de Quatrepixel « ton flyer est fini » + il poste en story | HyperFrames | ⏳ à faire |
 | 3b | Il lève la tête, inspire, petit sourire (il entend arriver le quartier) | `clip_2_refais` de 0 à **3,0 s** | ✅ gardé |
-| 4 | **Le zbeul** | Seedance (prompt ci-dessous) | ⏳ à générer |
+| 4 | **Le zbeul** (vue fenêtre puis coupe au sol) | Seedance, `prompts/zbeul_seedance_v4_fenetre.json` | ✅ validé (un peu juste en monde) |
 | 5 | Il distribue les AirPods, billets dans les mains | `clip_2` de **6,83 s à la fin** (3,2 s) | ✅ gardé |
-| 6 | Fin | à définir | ❓ |
+| 5b | Flash blanc + sifflement d'oreille (~0,5 s), coupe sèche | montage | ⏳ à faire |
+| 6 | Le calme d'après : même plan que le début, plus personne, cartons vides, billets dans les mains, bouche bée puis petit sourire, boule de foin | Seedance | ⏳ à faire |
+| 7 | Flyer : Snap quatrepixel + Lyon 38/69 | HyperFrames | ⏳ à faire |
 
 Jeté : `clip_2_refais` après 3,0 s (les bécanes écrasent le stock et continuent tout droit ;
 la fin avec la foule cagoulée est bien mais casse la cohérence), et `clip_2` avant 6,83 s.
