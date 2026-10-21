@@ -33,7 +33,6 @@ Le prompt sera en JSON, en français, sans secondes, et passera le garde-fou.
 
 ## Points à régler avant le prompt
 
-- Durée totale ≤ 25 s flyer compris : avec clip_1 (10 s) + clip_1_rater (6 s) + Snap + AirPods (3,2 s) + flyer, on dépasse déjà sans le zbeul.
-- Zbeul trop chargé pour un seul clip (bécanes + parachutes + foule + bagarre + billets) : à couper en 2 clips de 2-3 plans.
-- Foule : persos secondaires sans fiche = risque de visages qui se mélangent avec le VENDEUR.
+- Durée (réglée) : clip_1 en x2 = 5 s, clip_1_rater en x1,25 = 4,8 s, Snap ~2,5 s, **zbeul ~7 s** (1 clip, 2-3 plans), AirPods 3,2 s, flyer ~2,5 s → ~25 s.
+- Foule (validé) : surtout des cagoules, quelques visages pas vraiment nets, rendu réaliste. Un seul visage net : LE VENDEUR.
 - Références : recadrer le logo « Ai » ; il faut un gros plan visage seul + une image en pied du VENDEUR, et un décor sans perso avec de la place devant le stand pour que les bécanes s'arrêtent.
