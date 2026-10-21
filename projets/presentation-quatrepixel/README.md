@@ -40,3 +40,11 @@ la fin avec la foule cagoulée est bien mais casse la cohérence), et `clip_2` a
 - Durée (réglée) : clip_1 en x2 = 5 s, clip_1_rater en x1,25 = 4,8 s, Snap ~2,5 s, **zbeul ~7 s** (1 clip, 2-3 plans), AirPods 3,2 s, flyer ~2,5 s → ~25 s.
 - Foule (validé) : surtout des cagoules, quelques visages pas vraiment nets, rendu réaliste. Un seul visage net : LE VENDEUR.
 - Références (reçues) : `references/1_visage_vendeur.jpg`, `2_en_pied_vendeur.jpg`, `3_decor_stand.jpg` (logo « Ai » recadré). La fiche multi-vues sert seulement à valider le perso.
+
+## Essai Seedance du zbeul (1er essai) : retour
+
+- Plan 1 : plan large au ras du sol, parachutes noirs, cross qui sautent le muret, TMAX : OK. MAIS le décor a été réinventé (grand mur tagué) et LE STAND + LE VENDEUR sont collés au muret, minuscules ; les bécanes atterrissent devant lui et foncent vers la caméra.
+  Cause probable : j'ai demandé un cadrage « beaucoup plus loin et plus bas que @Image 3 » → Seedance a reconstruit le décor au lieu de garder @Image 3.
+- Plan 2 : il se lève et lève les bras : OK. MAIS cadré pile au centre face caméra (le 3/4 sur le tiers gauche a été ignoré) et la foule est 100 % cagoules noires → effet bande / braquage.
+- Plan 3 : il encaisse et donne les AirPods, visage stable : le meilleur plan. MAIS billets en DOLLARS : j'avais écrit « billets de banque » sans préciser euros.
+- Logo « Ai » en haut à gauche.
