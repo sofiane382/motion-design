@@ -26,19 +26,14 @@ la fin avec la foule cagoulée est bien mais casse la cohérence), et `clip_2` a
 - Stock : AirPods, parfums, puffs, casquettes de luxe, sacoches de luxe.
 - Doit finir serré sur lui entouré de mains, pour raccorder avec le plan AirPods (`references/raccord_airpods_debut.png`).
 
-## Prompt Seedance : le zbeul (10 s)
+## Prompt Seedance
 
-Références à joindre : `references/decor_large_clip1.png` (décor + stock),
-`references/perso_plan_moyen.png` (personnage).
+Pas encore écrit : on valide d'abord l'idée et la durée (skill pub-virale-seedance).
+Le prompt sera en JSON, en français, sans secondes, et passera le garde-fou.
 
-```
-3D animated cinematic style, vertical 9:16, French housing project (cité) at golden-hour sunset, same character and same set as the reference images: a young man in an olive green puffer jacket, black beanie with goggles on it, grey cargo pants, sitting on a black folding camping chair behind open cardboard boxes full of AirPods, perfumes, vapes (puffs), luxury caps and luxury designer bags.
+## Points à régler avant le prompt
 
-Shot 1 (0-3s), wide shot from behind the boxes toward the end of the street: a swarm of dirt bikes and scooters bursts in doing wheelies, thick smoke, engines screaming. They brake hard and STOP in a half circle right in front of his boxes. No bike touches or runs over the boxes. At the same time, dozens of black parachutes drop from the sky between the tower blocks.
-
-Shot 2 (3-6s), medium shot on him: he stands up from his chair and raises both arms in the air like a king, big confident smile. A crowd of young street guys from the hood rushes in around him from every side: many wearing black balaclavas, others with fade haircuts, caps and tracksuits. They shout, jump, push each other, phones in the air.
-
-Shot 3 (6-10s), tighter shot, total chaos around him: everyone fights to reach the boxes, hands grab AirPods, perfumes, vapes, caps and bags, the boxes empty fast. Dozens of hands push banknotes toward him from all directions, he grabs the cash, laughing. End framed on him surrounded by hands holding money.
-
-Energetic, chaotic, funny, crowd always AROUND him, never passing through him. Consistent character face and outfit in every shot.
-```
+- Durée totale ≤ 25 s flyer compris : avec clip_1 (10 s) + clip_1_rater (6 s) + Snap + AirPods (3,2 s) + flyer, on dépasse déjà sans le zbeul.
+- Zbeul trop chargé pour un seul clip (bécanes + parachutes + foule + bagarre + billets) : à couper en 2 clips de 2-3 plans.
+- Foule : persos secondaires sans fiche = risque de visages qui se mélangent avec le VENDEUR.
+- Références : recadrer le logo « Ai » ; il faut un gros plan visage seul + une image en pied du VENDEUR, et un décor sans perso avec de la place devant le stand pour que les bécanes s'arrêtent.
