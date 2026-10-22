@@ -19,7 +19,7 @@ HyperFrames (CLI npm `hyperframes`, compositions HTML rendues en vidéo). Commen
 
 ## Sortie attendue
 
-- `projets/presentation-quatrepixel/export/quatrepixel_presentation.mp4` : 1080x1920, 30 i/s, H.264, AAC 48 kHz stéréo, environ 32 s.
+- `projets/presentation-quatrepixel/export/quatrepixel_presentation.mp4` : 1080x1920, 30 i/s, H.264 haute qualité (voir « Qualité de l'image »), AAC 48 kHz stéréo, environ 32 s. Plus une version 4K.
 - Sons des clips GARDÉS (motos, foule, vent…) + les petits sons des écrans Snap. AUCUNE musique.
 - Aucun sous-titre, aucun texte en dehors de ceux listés ici.
 - Commit + push du projet HyperFrames, des scripts et de l'export sur la branche.
@@ -62,19 +62,24 @@ Plan 5 (≈ 3,6 s) : il tape « C'est posté » lettre par lettre dans le champ 
 
 Sons : un petit « ding » doux à chaque message reçu, un petit « swoosh » à l'envoi, des clics discrets quand il tape, un tick léger quand le compteur monte. Volume modéré, rien d'agressif.
 
-## Transitions et effets (fluide, dynamique, propre)
+## Transitions (retour de Sofiane : les effets spéciaux étaient bizarres, il n'en veut plus)
 
-- 1 → 2 : petit zoom punch vers lui avec flou de mouvement (≈ 0,25 s).
-- 2 → 3 : zoom dans l'écran du téléphone qui s'allume, l'écran Snap grandit depuis la position du téléphone jusqu'au plein écran (≈ 0,3 s).
-- 3 → 4 : l'écran Snap se rétracte / zoom arrière rapide vers le gros plan (≈ 0,25 s).
-- 4 → 5 : de nouveau zoom dans son téléphone vers l'écran Snap (≈ 0,3 s).
-- 5 → 6 : whip pan vertical vers le haut (flou de mouvement), calé sur le moment où il lève la tête (≈ 0,2 s).
-- 6 → 7 : IMPACT. Coupe sèche sur le zbeul avec un court tremblement de caméra et un zoom punch (≈ 0,3 s), le son des motos qui part d'un coup.
+- Toutes les transitions sont NORMALES : des coupes nettes, comme dans un vrai film. Pas de zoom punch, pas de whip pan, pas de tremblement, pas de flou de mouvement, pas de flash.
+- Seule exception douce : un fondu enchaîné très court (≈ 0,15 s) pour entrer dans les écrans Snap et en sortir (2 → 3, 3 → 4, 4 → 5, 5 → 6).
+- 6 → 7 (début du zbeul) : coupe nette, le son des motos part d'un coup.
 - La coupe interne du zbeul (fenêtre → sol, vers 3,75 s) reste une coupe nette.
-- 7 → 8 : whip pan horizontal (≈ 0,2 s).
-- 8 → 9 : COUPE SÈCHE volontaire, sans effet : le bruit de la foule s'arrête net et on tombe dans le calme (vent). C'est le gag, ne le lisse pas.
-- 9 → 10 : la dernière image du calme glisse vers le flyer avec un fondu court et lumineux (≈ 0,4 s).
-- Pas de flash blanc plein écran. Pas d'effets gadgets en trop : chaque transition doit servir le rythme.
+- 8 → 9 (zbeul → calme d'après) : transition « changement de monde », À CONFIRMER PAR SOFIANE (voir README, dernière section). Elle doit faire sentir qu'on passe du chaos au calme, un peu plus tard. Une coupe sèche toute seule NE VA PAS.
+- 9 → 10 (calme → flyer) : fondu enchaîné court (≈ 0,3 s).
+
+## Qualité de l'image (retour de Sofiane : le premier montage était devenu moche)
+
+- Les sources sont en 2160x3840 (`clip_4` en 1440x2560). Ne les dégrade jamais avant l'export final.
+- Pas de compressions en cascade : intermédiaires sans perte (images PNG ou vidéo en `-crf 0` / ProRes 4444), un seul encodage final.
+- Redimensionnement en `lanczos`, sans netteté artificielle ni débruitage.
+- Dans HyperFrames, prends le réglage de rendu le plus haut (images PNG, pas JPEG, qualité maximale) ; vérifie les options avec `--help`.
+- Export final : 1080x1920 en H.264 `-crf 14 -preset slow -pix_fmt yuv420p`, débit ≥ 15 Mb/s, AAC 320 kb/s. Fais AUSSI une version 2160x3840 (`quatrepixel_presentation_4K.mp4`), même réglages.
+- Le retrait du logo « Ai » ne doit laisser ni tache ni flou visible. Si `delogo` abîme le ciel, recadre légèrement à la place.
+- Avant de livrer, compare une image de chaque plan à la même image dans la source : la netteté et les couleurs doivent être les mêmes.
 
 ## Flyer de fin (plan 10, 2,5 s)
 
