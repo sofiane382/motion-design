@@ -20,7 +20,7 @@ PLANS = [
     ("p04", "video", "p04_lecture", 86, FONDU_SNAP),
     ("snap2", "snap", "snap2", 99, FONDU_SNAP),
     ("p06", "video", "p06_tete", 37, FONDU_SNAP),
-    ("p07", "video", "p07_zbeul", 211, 0),
+    ("p07", "video", "p07_zbeul", 209, 0),
     ("p08", "video", "p08_airpods", 96, 0),
     ("p09", "video", "p09_calme", 114, 0),
     ("flyer", "flyer", "flyer", 75, FONDU_FLYER),

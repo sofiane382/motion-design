@@ -19,7 +19,7 @@ ffmpeg -v error -y -i "$MASTER" -i "$MIX" -map 0:v -map 1:a \
   -vf "scale=1080:1920:flags=lanczos+accurate_rnd+full_chroma_int" -r 30 $X264 -crf 10 -level 4.2 $AAC -shortest \
   "$OUT/quatrepixel_presentation.mp4"
 [ "${SANS_4K:-0}" = 1 ] || ffmpeg -v error -y -i "$MASTER" -i "$MIX" -map 0:v -map 1:a \
-  -r 30 $X264 -crf 14 -level 5.2 $AAC -shortest \
+  -r 30 $X264 -crf 14 -level 5.1 $AAC -shortest \
   "$OUT/quatrepixel_presentation_4K.mp4"
 for f in "$OUT"/quatrepixel_presentation*.mp4; do
   echo "$f : $(ffprobe -v error -show_entries format=duration,bit_rate -of csv=p=0 "$f")"

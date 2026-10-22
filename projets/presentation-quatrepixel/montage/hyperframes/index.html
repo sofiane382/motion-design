@@ -16,7 +16,7 @@
     </style>
   </head>
   <body>
-    <div id="root" data-composition-id="main" data-start="0" data-duration="32.8333" data-width="1080" data-height="1920">
+    <div id="root" data-composition-id="main" data-start="0" data-duration="32.7667" data-width="1080" data-height="1920">
       <div class="fond"></div>
       <video id="p01" class="clip" src="assets/plans/p01_calme.mp4" data-start="0" data-duration="4.2333" data-track-index="2" muted playsinline style="z-index: 1"></video>
       <video id="p02" class="clip" src="assets/plans/p02_ennui.mp4" data-start="4.2333" data-duration="2.3333" data-track-index="1" muted playsinline style="z-index: 2"></video>
@@ -24,11 +24,11 @@
       <video id="p04" class="clip" src="assets/plans/p04_lecture.mp4" data-start="9.5333" data-duration="2.8667" data-track-index="1" muted playsinline style="z-index: 4"></video>
       <div id="snap2" data-composition-id="snap2" data-composition-src="compositions/snap2.html" data-start="12.2333" data-duration="3.3" data-track-index="3" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index: 5"></div>
       <video id="p06" class="clip" src="assets/plans/p06_tete.mp4" data-start="15.3667" data-duration="1.2333" data-track-index="1" muted playsinline style="z-index: 6"></video>
-      <video id="p07" class="clip" src="assets/plans/p07_zbeul.mp4" data-start="16.6" data-duration="7.0333" data-track-index="2" muted playsinline style="z-index: 7"></video>
-      <video id="p08" class="clip" src="assets/plans/p08_airpods.mp4" data-start="23.6333" data-duration="3.2" data-track-index="1" muted playsinline style="z-index: 8"></video>
-      <video id="p09" class="clip" src="assets/plans/p09_calme.mp4" data-start="26.8333" data-duration="3.8" data-track-index="2" muted playsinline style="z-index: 9"></video>
-      <div id="flyer" data-composition-id="flyer" data-composition-src="compositions/flyer.html" data-start="30.3333" data-duration="2.5" data-track-index="3" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index: 10"></div>
-      <audio id="mix" class="clip" src="assets/audio/mix.wav" data-start="0" data-duration="32.8333" data-track-index="5" data-volume="1"></audio>
+      <video id="p07" class="clip" src="assets/plans/p07_zbeul.mp4" data-start="16.6" data-duration="6.9667" data-track-index="2" muted playsinline style="z-index: 7"></video>
+      <video id="p08" class="clip" src="assets/plans/p08_airpods.mp4" data-start="23.5667" data-duration="3.2" data-track-index="1" muted playsinline style="z-index: 8"></video>
+      <video id="p09" class="clip" src="assets/plans/p09_calme.mp4" data-start="26.7667" data-duration="3.8" data-track-index="2" muted playsinline style="z-index: 9"></video>
+      <div id="flyer" data-composition-id="flyer" data-composition-src="compositions/flyer.html" data-start="30.2667" data-duration="2.5" data-track-index="3" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index: 10"></div>
+      <audio id="mix" class="clip" src="assets/audio/mix.wav" data-start="0" data-duration="32.7667" data-track-index="5" data-volume="1"></audio>
     </div>
     <script>
       const tl = gsap.timeline({ paused: true });
@@ -36,8 +36,8 @@
       tl.fromTo("#p04", { opacity: 0 }, { opacity: 1, duration: 0.1667, ease: "none" }, 9.5333);
       tl.fromTo("#snap2", { opacity: 0 }, { opacity: 1, duration: 0.1667, ease: "none" }, 12.2333);
       tl.fromTo("#p06", { opacity: 0 }, { opacity: 1, duration: 0.1667, ease: "none" }, 15.3667);
-      tl.fromTo("#flyer", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "none" }, 30.3333);
-      tl.to({}, { duration: 0.01 }, 32.8);
+      tl.fromTo("#flyer", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "none" }, 30.2667);
+      tl.to({}, { duration: 0.01 }, 32.7333);
       window.__timelines = window.__timelines || {};
       window.__timelines["main"] = tl;
       tl.seek(0);
