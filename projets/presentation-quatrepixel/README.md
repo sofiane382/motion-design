@@ -196,3 +196,10 @@ Logo « Ai » à recadrer sur clips 1, 2, 3, 5, 6 et sur le flyer.
 - Transition zbeul → calme : la coupe sèche ne marche pas, il faut un vrai « changement de monde ». Choix en attente : poussière / fondu au noir / « Quelques minutes plus tard… ».
 - Qualité de l'image dégradée → section « Qualité de l'image » ajoutée au prompt (pas de compressions en cascade, export haut débit + version 4K).
 - Transition zbeul → calme choisie : poussière dorée qui envahit l'écran + son étouffé → noir → silence → le calme apparaît avec le vent. Aucun texte. JAMAIS de sous-titres.
+
+## Qualité des sources (analyse)
+
+- Les fichiers du dépôt sont identiques octet pour octet à ceux reçus (aucune recompression de ma part).
+- Mesure (réduire puis ré-agrandir une image et comparer) : `clip_1`, `clip_2`, `clip_5`, `clip_6` (et `clip_3`) ne contiennent presque que du détail 720p, agrandi en 2160x3840 (écart < 1 niveau de gris en 720p). Débits faibles pour du 4K : 5,7 à 17 Mb/s.
+- `clip_4` (zbeul) a plus de vrai détail (~1080p et plus) → il paraît plus net que les autres, d'où un mélange de qualités.
+- Cause : Seedance génère en 720p, l'export « 4K » ne fait qu'agrandir. Remède : upscale IA de chaque clip (Dreamina « HD/Upscale », CapCut « Améliorer la qualité », ou Topaz) ou génération en 1080p, puis montage.
