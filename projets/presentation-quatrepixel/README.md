@@ -164,10 +164,35 @@ Logo « Ai » à recadrer sur clips 1, 2, 3, 5, 6 et sur le flyer.
 - PAS de liste de commerces, PAS de délai, PAS de prix.
 - Typo : pas de police banale. Rendu très clean, beau, attirant (titre gras condensé avec effet, hiérarchie nette, peu de texte).
 
-## ✅ Montage final livré (HyperFrames)
+## Zbeul : à refaire (retour sur `clip_4`)
 
-- Vidéo : `export/quatrepixel_presentation.mp4` — 1080x1920, 30 i/s, H.264 + AAC 48 kHz stéréo, **31,8 s**, sons des clips + sons Snap, sans musique (pic -3,6 dB).
-- Projet : `montage/hyperframes/` (`index.html` = montage et transitions ; `compositions/snap1.html`, `snap2.html`, `flyer.html`).
-- Préparation (à relancer dans l'ordre si une source change) : `montage/scripts/1_preparer_clips.sh` (coupes, vitesses image + son, logo « Ai » retiré, ambiance des plans calmes remontée), `2_preparer_flyer.py` (Snapcode incrusté en perspective dans l'écran vert), `3_preparer_snap.py` (avatar, emojis, sons ding / swoosh / clics / ticks).
-- Rendu : `cd montage/hyperframes && npx hyperframes@0.8.185 render -q high -f 30 -o ../../export/quatrepixel_presentation.mp4`.
-- Durée : la somme des plans du tableau v3 fait 33,7 s (et non 31) ; les transitions se chevauchent (≈ 0,2-0,4 s chacune) pour tomber à 31,8 s.
+- Pas assez « zbeul », pas assez de monde.
+- Bécanes : elles doivent arriver du côté de la caméra ET un peu d'en face. Là, seulement d'en face.
+- Foule floue, bizarre, on ne comprend pas ce que c'est. Cause : mon prompt imposait « la foule reste floue ».
+- Pas des jeunes maghrébins / arabes de cité comme voulu. Il veut de vrais jeunes du quartier, typés.
+- Tout le monde a la même tenue : il faut des tenues variées.
+- En plus : on les voit SAUTER DU BÂTIMENT en parachute (noir). Vraiment beaucoup de monde qui se bouscule dans tous les sens.
+- Durée : on peut ajouter 1 s → zbeul ≈ 7 s.
+- Décidé : on reste sur la VUE DE LA FENÊTRE (plan 1), puis coupe au sol (plan 2). 7 s.
+  Depuis la fenêtre : « côté caméra » = bécanes qui sortent du passage juste sous la fenêtre ; « en face » = bécanes qui sautent le muret du fond. Parachutistes qui sautent du toit de la tour d'en face.
+- LE VENDEUR dans `clip_4` : raide, tout droit, « réaction IA », pas naturel. À corriger : vraie réaction humaine, il bouge, il se fait bousculer, il ne pose pas.
+
+## Zbeul final (remplace `clip_4`)
+
+- `sources/clip_4.mp4` = nouvelle version validée par Sofiane (`plan_becane_ect.mp4`) : 7,07 s, 1440x2560, 60 i/s, coupe fenêtre → sol à 3,75 s, pas de logo « Ai » visible.
+- Montage total ≈ 32 s.
+
+## Flyer de fin v2 (remplace l'écran vert)
+
+- `references/flyer/flyer_tmax.jpg` : le Bitmoji de Quatrepixel (3D Pixar, lunettes vertes, tenue à pois) au guidon d'un TMAX, le vendeur derrière avec une liasse de dollars, sans casque, à l'arrêt, chaise et cartons vides à côté. Validé. Pas de logo « Ai ».
+- Snapcode posé en carte jaune en bas (au montage), plus de téléphone.
+- Prompt image : `prompts/flyer_tmax_image.json`.
+
+- Sous-titre du flyer changé : « Démarque-toi de la concurrence » (remplace « qui fait venir tout le quartier »).
+
+## Retours sur le premier montage HyperFrames
+
+- Effets de transition bizarres → transitions normales (coupes nettes, fondus courts pour les écrans Snap).
+- Transition zbeul → calme : la coupe sèche ne marche pas, il faut un vrai « changement de monde ». Choix en attente : poussière / fondu au noir / « Quelques minutes plus tard… ».
+- Qualité de l'image dégradée → section « Qualité de l'image » ajoutée au prompt (pas de compressions en cascade, export haut débit + version 4K).
+- Transition zbeul → calme choisie : poussière dorée qui envahit l'écran + son étouffé → noir → silence → le calme apparaît avec le vent. Aucun texte. JAMAIS de sous-titres.

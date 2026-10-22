@@ -1,0 +1,12 @@
+{
+"references": "Image 1 = le visage du VENDEUR. Image 2 = la tenue et la silhouette du VENDEUR. Image 3 = LE BITMOJI, en pied. Image 4 = le décor.",
+"but": "Une seule image fixe verticale 9:16, style affiche de pub : LE BITMOJI et LE VENDEUR, deux potes, posés ensemble sur un gros scooter TMAX à l'arrêt, juste après avoir tout vendu.",
+"le_bitmoji": "LE BITMOJI de Image 3 refait en 3D style Pixar, en gardant tout ce qui le rend reconnaissable : peau foncée, dreadlocks châtain foncé, fine moustache, grosses lunettes vertes lumineuses avec une petite lumière au milieu, tenue moitié blanche à pois bleus et moitié bleu roi, collerette blanche à volants, volants rouges aux poignets et aux chevilles, gilet noir sans manches à boutons dorés, Crocs grises avec des badges.",
+"le_vendeur": "LE VENDEUR identique aux Images 1 et 2, en 3D style Pixar : jeune homme à peau mate, sourcils épais, courte barbe, bonnet noir avec lunettes rondes à lentilles C.P. Company, doudoune kaki brillante ouverte avec la lentille C.P. Company sur la manche gauche, pull vert sauge, cargo gris anthracite, baskets Mizuno noires.",
+"scooter": "Un vrai Yamaha TMAX, gros maxi-scooter sportif gris mat et noir, garé à l'arrêt sur sa béquille, vu de trois quarts avant, taille réelle.",
+"pose": "LE BITMOJI est assis devant, aux commandes, une main sur le guidon, l'autre qui fait un pouce en l'air, grand sourire. LE VENDEUR est assis derrière lui sur la selle passager, il brandit une grosse liasse de billets en dollars d'une main et pose l'autre sur l'épaule du BITMOJI, en éclatant de rire. Aucun casque. Les deux regardent l'objectif, complices comme deux frères.",
+"decor": "Le décor de Image 4 au coucher du soleil, en contre-jour doré : l'esplanade en béton fissuré de la cité, le muret tagué, les tours. À côté du TMAX, la chaise de camping noire et les cartons de Image 4 complètement vides, renversés, rabats ouverts, emballages déchirés par terre, traces de pneus sur le béton.",
+"cadrage": "Le TMAX et les deux personnages au centre de l'image, en entier. Du ciel libre en haut de l'image et du sol libre en bas, pour y ajouter des textes plus tard.",
+"rendu": "Personnages en 3D style Pixar, décor photoréaliste, lumière dorée de fin de journée, rendu cinéma haute définition.",
+"contraintes": "Une seule image, exactement deux personnages, mains réalistes à cinq doigts, proportions réalistes entre les personnages et le TMAX. Aucun texte, aucun logo ajouté, aucun filigrane."
+}
