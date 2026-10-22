@@ -1,5 +1,5 @@
-<!-- Écran Snap, partie 1 (3,8 s) : Quatrepixel écrit… « Ton flyer est prêt 🔥 », écrit… « Mets-le en story ».
-     Les sons (dings) sont dans assets/snap/snap1_sons.wav, calés sur les mêmes temps (0,9 s et 2,6 s). -->
+<!-- Écran Snap, partie 1 (3,3 s) : Quatrepixel écrit… « Ton flyer est prêt 🔥 », écrit… « Mets-le en story ».
+     Les sons (dings) sont dans assets/snap/snap1_sons.wav, calés sur les mêmes temps (0,8 s et 2,25 s). -->
 <template>
   <style>
     @font-face { font-family: "Archivo"; font-weight: 500; src: url("assets/fonts/archivo-latin-500-normal.woff2"); }
@@ -31,7 +31,7 @@
     #s1-l1, #s1-m1, #s1-m2, #s1-ecrit, #s1-etat-instant { opacity: 0; }
   </style>
   <div id="root" data-composition-id="snap1" data-width="1080" data-height="1920">
-    <div id="s1-ecran" class="sn-ecran clip" data-start="0" data-duration="3.8" data-track-index="0">
+    <div id="s1-ecran" class="sn-ecran clip" data-start="0" data-duration="3.3" data-track-index="0">
       <div class="sn-tete" data-layout-allow-overlap>
         <svg class="sn-retour" viewBox="0 0 44 70"><path d="M36 6 L8 35 L36 64" fill="none" stroke="#2a2a2a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <img class="sn-av" src="assets/snap/avatar.png" alt="" />
@@ -80,11 +80,11 @@
         }
       };
       gsap.set("#s1-pile", { y: LABEL + 2 * LIGNE - ECRIT });
-      ecrit(0, 0.9, LABEL + 2 * LIGNE - ECRIT);
-      arrive(0.9, ["#s1-l1", "#s1-m1"], LIGNE);
-      ecrit(1.9, 2.6, LIGNE - ECRIT);
-      arrive(2.6, ["#s1-m2"], 0);
-      tl.to({}, { duration: 0.01 }, 3.79);
+      ecrit(0, 0.8, LABEL + 2 * LIGNE - ECRIT);
+      arrive(0.8, ["#s1-l1", "#s1-m1"], LIGNE);
+      ecrit(1.6, 2.25, LIGNE - ECRIT);
+      arrive(2.25, ["#s1-m2"], 0);
+      tl.to({}, { duration: 0.01 }, 3.29);
       window.__timelines["snap1"] = tl;
     })();
   </script>

@@ -1,2 +1,5 @@
 .hyperframes/
 node_modules/
+renders/
+# Plans intermédiaires sans perte (≈ 500 Mo) : régénérés par ../scripts/1_preparer_clips.sh puis 4_transition_poussiere.py
+assets/plans/

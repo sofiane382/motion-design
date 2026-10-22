@@ -11,7 +11,7 @@ OUT = ICI.parent / "hyperframes/assets/snap"
 OUT.mkdir(parents=True, exist_ok=True)
 EMOJI = "/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf"
 
-for nom, ch in [("feu", "🔥"), ("yeux", "👀"), ("fantome", "👻")]:
+for nom, ch in [("feu", "🔥"), ("yeux", "👀")]:
     im = Image.new("RGBA", (160, 160), (0, 0, 0, 0))
     ImageDraw.Draw(im).text((10, 10), ch, font=ImageFont.truetype(EMOJI, 109), embedded_color=True)
     im.crop(im.getbbox()).save(OUT / f"{nom}.png")
@@ -62,7 +62,7 @@ ecrire("tick", tick, -26)
 print(sorted(p.name for p in OUT.iterdir()))
 
 
-# Pistes son des deux écrans Snap, calées sur les temps des compositions snap1.html et snap2.html.
+# Pistes son des deux écrans Snap, calées sur les temps des compositions snap1.html et snap2.html (à garder synchrones).
 def lire(nom):
     with wave.open(str(OUT / f"{nom}.wav")) as w:
         return np.frombuffer(w.readframes(w.getnframes()), np.int16).reshape(-1, 2)[:, 0] / 32767
@@ -77,10 +77,10 @@ def piste(nom, duree, evts):
         w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR); w.writeframes(s.tobytes())
 
 
-piste("snap1_sons", 3.8, [("ding", 0.9), ("ding", 2.6)])
+piste("snap1_sons", 3.3, [("ding", 0.8), ("ding", 2.25)])
 TEXTE = "C'est posté"
-evts = [("clic", 0.25 + i * 0.055) for i, c in enumerate(TEXTE) if c != " "]
-evts += [("swoosh", 0.95 - 0.16)]
-evts += [("tick", 1.15 + i * 0.17) for i in range(9)]
-evts += [("ding", 2.0)]
-piste("snap2_sons", 3.6, evts)
+evts = [("clic", 0.2 + i * 0.055) for i, c in enumerate(TEXTE) if c != " "]
+evts += [("swoosh", 0.85 - 0.16)]
+evts += [("tick", 1.05 + i * 0.15) for i in range(9)]
+evts += [("ding", 1.85)]
+piste("snap2_sons", 3.3, evts)

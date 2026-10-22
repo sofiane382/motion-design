@@ -196,3 +196,11 @@ Logo « Ai » à recadrer sur clips 1, 2, 3, 5, 6 et sur le flyer.
 - Transition zbeul → calme : la coupe sèche ne marche pas, il faut un vrai « changement de monde ». Choix en attente : poussière / fondu au noir / « Quelques minutes plus tard… ».
 - Qualité de l'image dégradée → section « Qualité de l'image » ajoutée au prompt (pas de compressions en cascade, export haut débit + version 4K).
 - Transition zbeul → calme choisie : poussière dorée qui envahit l'écran + son étouffé → noir → silence → le calme apparaît avec le vent. Aucun texte. JAMAIS de sous-titres.
+
+## ✅ Montage final v2 livré (HyperFrames)
+
+- Vidéos : `export/quatrepixel_presentation.mp4` (1080x1920) et `export/quatrepixel_presentation_4K.mp4` (2160x3840) — 30 i/s, H.264 `-crf 14 -preset slow`, AAC 320 kb/s 48 kHz stéréo, **32,8 s**. Sons des clips + sons Snap, aucune musique, aucun sous-titre.
+- Transitions : coupes nettes partout ; fondus de 5 images (0,17 s) pour entrer et sortir des écrans Snap ; poussière dorée → noir → silence → le calme apparaît avec le vent et quelques grains dans les rayons (zbeul → calme) ; fondu de 0,3 s du calme vers le flyer.
+- Durée : la somme du tableau fait ≈ 34,8 s. Pour rester entre 30 et 33 s : début de `clip_1` à 0,5 s et de `clip_2` à 0,2 s, écrans Snap de 3,3 s (au lieu de 3,8 / 3,6), en gardant tous les messages et le temps de lecture.
+- Qualité : intermédiaires sans perte (plans en 2160x3840 `-crf 0`, son en WAV), composition rendue en 4K (`--resolution portrait-4k`, images extraites en PNG, master `-crf 0`), un seul encodage final.
+- Refaire tout le montage, dans l'ordre (depuis `montage/scripts/`) : `1_preparer_clips.sh`, `2_preparer_flyer.py`, `3_preparer_snap.py`, `4_transition_poussiere.py`, `5_generer_montage.py` (écrit `index.html` et `assets/audio/mix.wav` à partir d'une seule timeline), puis le rendu du master 4K (commande en tête de `6_exporter.sh`) et `6_exporter.sh <master>`.

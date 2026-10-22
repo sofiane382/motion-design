@@ -1,4 +1,4 @@
-<!-- Écran Snap, partie 2 (3,6 s) : il tape « C'est posté » et l'envoie (MOI, bleu), Quatrepixel écrit…
+<!-- Écran Snap, partie 2 (3,3 s) : il tape « C'est posté » et l'envoie (MOI, bleu), Quatrepixel écrit…
      « Regarde dehors 👀 », et la notification « Ma story · Vue par N personnes » s'emballe.
      Les sons (clics, swoosh, ticks, ding) sont dans assets/snap/snap2_sons.wav, calés sur les mêmes temps. -->
 <template>
@@ -41,7 +41,7 @@
     .sn-saisie span:not(.sn-curseur) { display: none; }
   </style>
   <div id="root" data-composition-id="snap2" data-width="1080" data-height="1920">
-    <div id="s2-ecran" class="sn-ecran clip" data-start="0" data-duration="3.6" data-track-index="0">
+    <div id="s2-ecran" class="sn-ecran clip" data-start="0" data-duration="3.3" data-track-index="0">
       <div class="sn-tete" data-layout-allow-overlap>
         <svg class="sn-retour" viewBox="0 0 44 70"><path d="M36 6 L8 35 L36 64" fill="none" stroke="#2a2a2a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <img class="sn-av" src="assets/snap/avatar.png" alt="" />
@@ -112,25 +112,25 @@
       // État de départ : la conversation de la partie 1 est là, les deux blocs suivants sont cachés sous la ligne.
       gsap.set("#s2-pile", { y: 2 * BLOC });
       // Il tape « C'est posté » lettre par lettre.
-      tl.set("#s2-ph", { opacity: 0 }, 0.25).set("#s2-saisie", { opacity: 1 }, 0.25);
+      tl.set("#s2-ph", { opacity: 0 }, 0.2).set("#s2-saisie", { opacity: 1 }, 0.2);
       const N = 11;
       // Lettres masquées (display) pour que le curseur avance avec le texte.
       for (let i = 0; i < N; i++) {
-        tl.set("#s2-c" + i, { display: "inline" }, 0.25 + i * 0.055);
+        tl.set("#s2-c" + i, { display: "inline" }, 0.2 + i * 0.055);
       }
       // Envoi : le champ se vide, le message part.
-      tl.to("#s2-saisie", { opacity: 0, y: -14, duration: 0.1, ease: "power2.in" }, 0.95);
-      tl.set("#s2-ph", { opacity: 1 }, 1.05);
-      arrive(0.95, ["#s2-l3", "#s2-m3"], BLOC);
+      tl.to("#s2-saisie", { opacity: 0, y: -14, duration: 0.1, ease: "power2.in" }, 0.85);
+      tl.set("#s2-ph", { opacity: 1 }, 0.95);
+      arrive(0.85, ["#s2-l3", "#s2-m3"], BLOC);
       // La notification glisse du haut, le compteur s'emballe.
-      tl.fromTo("#s2-notif", { y: -300, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "expo.out", immediateRender: false }, 1.05);
+      tl.fromTo("#s2-notif", { y: -300, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "expo.out", immediateRender: false }, 0.95);
       for (let i = 0; i < 9; i++) {
-        tl.set("#s2-n" + i, { opacity: 1 }, 1.15 + i * 0.17);
-        if (i > 0) tl.set("#s2-n" + (i - 1), { opacity: 0 }, 1.15 + i * 0.17);
+        tl.set("#s2-n" + i, { opacity: 1 }, 1.05 + i * 0.15);
+        if (i > 0) tl.set("#s2-n" + (i - 1), { opacity: 0 }, 1.05 + i * 0.15);
       }
-      ecrit(1.35, 2.0, BLOC - ECRIT);
-      arrive(2.0, ["#s2-l4", "#s2-m4"], 0);
-      tl.to({}, { duration: 0.01 }, 3.59);
+      ecrit(1.2, 1.85, BLOC - ECRIT);
+      arrive(1.85, ["#s2-l4", "#s2-m4"], 0);
+      tl.to({}, { duration: 0.01 }, 3.29);
       window.__timelines["snap2"] = tl;
     })();
   </script>
