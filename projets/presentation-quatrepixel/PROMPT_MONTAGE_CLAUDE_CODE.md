@@ -4,7 +4,7 @@ Tu fais le montage final d'une pub verticale pour Quatrepixel (Sofiane, créateu
 
 Dépôt GitHub `sofiane382/motion-design`, branche `claude/charming-feynman-3yb2ow`. Tout est dans `projets/presentation-quatrepixel/` :
 
-- `sources/clip_1.mp4` … `clip_6.mp4` : les 6 clips finaux (2160x3840, 9:16, avec son).
+- `sources/clip_1.mp4` … `clip_6.mp4` : les 6 clips finaux (9:16, avec son ; 2160x3840 sauf `clip_4` en 1440x2560 60 i/s).
 - `references/flyer/flyer_ecran_vert.webp` : l'image du flyer de fin (1116x2000), avec un téléphone à écran vert.
 - `references/flyer/snapcode_quatrepixel.jpg` : le Snapcode à incruster dans cet écran.
 - `montage/snap/maquette_snap_v3.py` : la maquette validée des écrans Snap. C'est la référence visuelle et de rythme : reproduis-la en mieux (animations), sans changer les textes ni l'ordre.
@@ -18,7 +18,7 @@ HyperFrames (CLI npm `hyperframes`, compositions HTML rendues en vidéo). Commen
 
 ## Sortie attendue
 
-- `projets/presentation-quatrepixel/export/quatrepixel_presentation.mp4` : 1080x1920, 30 i/s, H.264, AAC 48 kHz stéréo, environ 31 s.
+- `projets/presentation-quatrepixel/export/quatrepixel_presentation.mp4` : 1080x1920, 30 i/s, H.264, AAC 48 kHz stéréo, environ 32 s.
 - Sons des clips GARDÉS (motos, foule, vent…) + les petits sons des écrans Snap. AUCUNE musique.
 - Aucun sous-titre, aucun texte en dehors de ceux listés ici.
 - Commit + push du projet HyperFrames, des scripts et de l'export sur la branche.
@@ -33,7 +33,7 @@ HyperFrames (CLI npm `hyperframes`, compositions HTML rendues en vidéo). Commen
 | 4 | Gros plan : il lit, surpris → sourire | `clip_2` de 3,13 s à la fin | x1 | ≈ 2,9 s |
 | 5 | ÉCRAN SNAP partie 2 (voir plus bas) | HyperFrames | — | ≈ 3,6 s |
 | 6 | Il lève la tête et sourit | `clip_3` de 1,0 s à la fin | x1,25 | ≈ 1,2 s |
-| 7 | LE ZBEUL : vue d'une fenêtre (motos, parachutes noirs, foule) puis coupe au sol, la foule vide les cartons | `clip_4` entier | x1 | ≈ 6,0 s |
+| 7 | LE ZBEUL : vue d'une fenêtre (parachutistes qui sautent de la tour, motos de partout, foule) puis coupe au sol vers 3,75 s, la foule se jette sur les cartons et lui tend des billets | `clip_4` entier (7,07 s) | x1 | ≈ 7,1 s |
 | 8 | AirPods + billets, gros plan | `clip_5` entier | x1 | ≈ 3,2 s |
 | 9 | Le calme d'après : seul, cartons vides, billets, grand sourire | `clip_6` de 0 à 3,5 s | x1 | 3,5 s |
 | 10 | FLYER DE FIN (voir plus bas) | image + Snapcode | — | 2,5 s |
@@ -42,7 +42,7 @@ Quand tu accélères un clip, accélère aussi son son (atempo) pour qu'il reste
 
 ## Logo « Ai » à enlever
 
-Un petit logo blanc « Ai » est en haut à gauche de `clip_1`, `clip_2`, `clip_3`, `clip_5`, `clip_6` et du flyer (environ x 60-150, y 60-140 sur 2160x3840 ; environ x 25-75, y 25-70 sur l'image du flyer). `clip_4` n'en a pas, mais vérifie quand même. Enlève-le proprement : ffmpeg `delogo` sur le ciel, ou un léger recadrage (~8 %) si `delogo` laisse une tache visible. Vérifie sur une image de chaque plan, en zoomant, qu'il n'en reste aucune trace.
+Un petit logo blanc « Ai » est en haut à gauche de `clip_1`, `clip_2`, `clip_3`, `clip_5`, `clip_6` et du flyer (environ x 60-150, y 60-140 sur 2160x3840 ; environ x 25-75, y 25-70 sur l'image du flyer). `clip_4` n'en a pas a priori, vérifie quand même. Enlève-le proprement : ffmpeg `delogo` sur le ciel, ou un léger recadrage (~8 %) si `delogo` laisse une tache visible. Vérifie sur une image de chaque plan, en zoomant, qu'il n'en reste aucune trace.
 
 ## Écrans Snap (plans 3 et 5)
 
@@ -69,7 +69,7 @@ Sons : un petit « ding » doux à chaque message reçu, un petit « swoosh » �
 - 4 → 5 : de nouveau zoom dans son téléphone vers l'écran Snap (≈ 0,3 s).
 - 5 → 6 : whip pan vertical vers le haut (flou de mouvement), calé sur le moment où il lève la tête (≈ 0,2 s).
 - 6 → 7 : IMPACT. Coupe sèche sur le zbeul avec un court tremblement de caméra et un zoom punch (≈ 0,3 s), le son des motos qui part d'un coup.
-- La coupe interne du zbeul (fenêtre → sol, vers 3,33 s) reste une coupe nette.
+- La coupe interne du zbeul (fenêtre → sol, vers 3,75 s) reste une coupe nette.
 - 7 → 8 : whip pan horizontal (≈ 0,2 s).
 - 8 → 9 : COUPE SÈCHE volontaire, sans effet : le bruit de la foule s'arrête net et on tombe dans le calme (vent). C'est le gag, ne le lisse pas.
 - 9 → 10 : la dernière image du calme glisse vers le flyer avec un fondu court et lumineux (≈ 0,4 s).
@@ -107,7 +107,7 @@ Animation d'entrée, dans l'ordre et rapide (tout est en place avant 1,2 s, puis
 
 ## Vérifications avant de livrer (obligatoires)
 
-1. Durée totale ≈ 31 s (entre 29 et 32 s). Les durées de chaque plan correspondent au tableau.
+1. Durée totale ≈ 32 s (entre 30 et 33 s). Les durées de chaque plan correspondent au tableau.
 2. Extrais une image au milieu de chaque plan et regarde-la. Vérifie qu'il n'y a pas de logo « Ai », pas de bord noir, pas de déformation, et que les textes Snap sont lisibles et sans faute.
 3. Flyer en pleine résolution : Snapcode net, sans aucun vert visible, textes lisibles et pas sur le visage.
 4. Son : pas de saturation (pic < -1 dB), son synchro sur les plans accélérés, coupe sèche bien nette entre le plan 8 et le plan 9.
