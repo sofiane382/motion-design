@@ -5,8 +5,9 @@ Tu fais le montage final d'une pub verticale pour Quatrepixel (Sofiane, créateu
 Dépôt GitHub `sofiane382/motion-design`, branche `claude/charming-feynman-3yb2ow`. Tout est dans `projets/presentation-quatrepixel/` :
 
 - `sources/clip_1.mp4` … `clip_6.mp4` : les 6 clips finaux (9:16, avec son ; 2160x3840 sauf `clip_4` en 1440x2560 60 i/s).
-- `references/flyer/flyer_ecran_vert.webp` : l'image du flyer de fin (1116x2000), avec un téléphone à écran vert.
-- `references/flyer/snapcode_quatrepixel.jpg` : le Snapcode à incruster dans cet écran.
+- `references/flyer/flyer_tmax.jpg` : l'image du flyer de fin (1116x2000) : le Bitmoji de Quatrepixel au guidon d'un TMAX, le vendeur derrière avec une liasse de billets, cartons vides à côté.
+- `references/flyer/snapcode_quatrepixel.jpg` : le Snapcode de Quatrepixel, à poser en carte sur le flyer.
+- `montage/flyer/fonts/` : polices Anton, Permanent Marker, Archivo Black.
 - `montage/snap/maquette_snap_v3.py` : la maquette validée des écrans Snap. C'est la référence visuelle et de rythme : reproduis-la en mieux (animations), sans changer les textes ni l'ordre.
 - `README.md` : tout l'historique des décisions (à lire en entier avant de commencer).
 
@@ -42,7 +43,7 @@ Quand tu accélères un clip, accélère aussi son son (atempo) pour qu'il reste
 
 ## Logo « Ai » à enlever
 
-Un petit logo blanc « Ai » est en haut à gauche de `clip_1`, `clip_2`, `clip_3`, `clip_5`, `clip_6` et du flyer (environ x 60-150, y 60-140 sur 2160x3840 ; environ x 25-75, y 25-70 sur l'image du flyer). `clip_4` n'en a pas a priori, vérifie quand même. Enlève-le proprement : ffmpeg `delogo` sur le ciel, ou un léger recadrage (~8 %) si `delogo` laisse une tache visible. Vérifie sur une image de chaque plan, en zoomant, qu'il n'en reste aucune trace.
+Un petit logo blanc « Ai » est en haut à gauche de `clip_1`, `clip_2`, `clip_3`, `clip_5`, `clip_6` (environ x 60-150, y 60-140 sur 2160x3840). L'image du flyer n'en a pas. `clip_4` n'en a pas a priori, vérifie quand même. Enlève-le proprement : ffmpeg `delogo` sur le ciel, ou un léger recadrage (~8 %) si `delogo` laisse une tache visible. Vérifie sur une image de chaque plan, en zoomant, qu'il n'en reste aucune trace.
 
 ## Écrans Snap (plans 3 et 5)
 
@@ -77,15 +78,15 @@ Sons : un petit « ding » doux à chaque message reçu, un petit « swoosh » �
 
 ## Flyer de fin (plan 10, 2,5 s)
 
-Base : `flyer_ecran_vert.webp` (logo « Ai » retiré), mise à l'échelle en 1080x1920 sans déformer (recadre légèrement si besoin), avec un très léger zoom avant continu (1,00 → 1,04).
+Base : `flyer_tmax.jpg`, mise à l'échelle en 1080x1920 sans déformer (recadre légèrement si besoin), avec un très léger zoom avant continu (1,00 → 1,04). Zones libres pour les textes : le ciel en haut (au-dessus des personnages, environ le premier quart de l'image) et le sol en bas (sous la roue avant, environ le dernier cinquième).
 
-Snapcode dans le téléphone : remplace tout le vert de l'écran (environ coins (190,442), (330,438), (354,742), (212,752) sur l'image 1116x2000) par `snapcode_quatrepixel.jpg`, en perspective pour suivre l'inclinaison du téléphone. Utilise le vert comme masque (incrustation chroma) pour garder les coins arrondis, et ne laisse aucun liseré vert. Le Snapcode doit rester net et scannable.
+Snapcode : pose `snapcode_quatrepixel.jpg` en carte (le carré jaune à coins arrondis, recadré sans le texte du dessous), dans la zone du bas, avec une ombre douce. Il doit rester net et scannable : au moins 260 px de côté en 1080x1920. Ne le pose sur aucun personnage ni sur le TMAX.
 
 Textes (uniquement ceux-là, pas de prix, pas de délai, pas de liste de commerces) :
 
 1. En haut, sur le ciel : « TON FLYER VIDÉO », très gros et très lisible.
 2. Juste en dessous, plus petit : « qui fait venir tout le quartier ».
-3. En bas : un bouton « Ajoute-moi sur Snapchat », et dessous le nom d'utilisateur « quatrepixel ».
+3. En bas, à côté de la carte Snapcode : un bouton « Ajoute-moi sur Snapchat », et dessous le nom d'utilisateur « quatrepixel ».
 4. Tout en bas : « LYON · 38 · 69 ».
 
 Direction artistique : PAS de police banale (pas d'Arial, pas d'Inter, pas de police système). Rendu très clean, beau et attirant, ambiance street / rap premium. Par exemple :
@@ -95,13 +96,13 @@ Direction artistique : PAS de police banale (pas d'Arial, pas d'Inter, pas de po
 - bouton Snapchat en pilule jaune Snap, texte noir gras ;
 - « LYON · 38 · 69 » espacé, en capitales.
 
-Ajoute des dégradés sombres discrets en haut et en bas pour que tout se lise sur l'image. Laisse son visage, le téléphone et les billets bien visibles : aucun texte dessus.
+Ajoute des dégradés sombres discrets en haut et en bas pour que tout se lise sur l'image. Laisse les deux visages, le TMAX et la liasse de billets bien visibles : aucun texte dessus.
 
 Animation d'entrée, dans l'ordre et rapide (tout est en place avant 1,2 s, puis l'image tient) :
 
 - titre qui arrive avec un petit rebond ;
 - sous-titre en fondu ;
-- l'écran du téléphone qui s'allume avec un léger halo ;
+- la carte Snapcode qui apparaît avec un léger rebond et un petit halo jaune ;
 - bouton Snapchat qui « pop » ;
 - « LYON · 38 · 69 » qui glisse depuis le bas.
 

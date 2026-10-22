@@ -181,3 +181,9 @@ Logo « Ai » à recadrer sur clips 1, 2, 3, 5, 6 et sur le flyer.
 
 - `sources/clip_4.mp4` = nouvelle version validée par Sofiane (`plan_becane_ect.mp4`) : 7,07 s, 1440x2560, 60 i/s, coupe fenêtre → sol à 3,75 s, pas de logo « Ai » visible.
 - Montage total ≈ 32 s.
+
+## Flyer de fin v2 (remplace l'écran vert)
+
+- `references/flyer/flyer_tmax.jpg` : le Bitmoji de Quatrepixel (3D Pixar, lunettes vertes, tenue à pois) au guidon d'un TMAX, le vendeur derrière avec une liasse de dollars, sans casque, à l'arrêt, chaise et cartons vides à côté. Validé. Pas de logo « Ai ».
+- Snapcode posé en carte jaune en bas (au montage), plus de téléphone.
+- Prompt image : `prompts/flyer_tmax_image.json`.
