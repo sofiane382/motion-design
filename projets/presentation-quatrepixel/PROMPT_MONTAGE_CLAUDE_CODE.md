@@ -21,7 +21,7 @@ HyperFrames (CLI npm `hyperframes`, compositions HTML rendues en vidéo). Commen
 
 - `projets/presentation-quatrepixel/export/quatrepixel_presentation.mp4` : 1080x1920, 30 i/s, H.264 haute qualité (voir « Qualité de l'image »), AAC 48 kHz stéréo, environ 32 s. Plus une version 4K.
 - Sons des clips GARDÉS (motos, foule, vent…) + les petits sons des écrans Snap. AUCUNE musique.
-- Aucun sous-titre, aucun texte en dehors de ceux listés ici.
+- JAMAIS de sous-titres (Sofiane insiste), aucun texte en dehors de ceux des écrans Snap et du flyer.
 - Commit + push du projet HyperFrames, des scripts et de l'export sur la branche.
 
 ## Montage, plan par plan
@@ -68,7 +68,12 @@ Sons : un petit « ding » doux à chaque message reçu, un petit « swoosh » �
 - Seule exception douce : un fondu enchaîné très court (≈ 0,15 s) pour entrer dans les écrans Snap et en sortir (2 → 3, 3 → 4, 4 → 5, 5 → 6).
 - 6 → 7 (début du zbeul) : coupe nette, le son des motos part d'un coup.
 - La coupe interne du zbeul (fenêtre → sol, vers 3,75 s) reste une coupe nette.
-- 8 → 9 (zbeul → calme d'après) : transition « changement de monde », À CONFIRMER PAR SOFIANE (voir README, dernière section). Elle doit faire sentir qu'on passe du chaos au calme, un peu plus tard. Une coupe sèche toute seule NE VA PAS.
+- 8 → 9 (zbeul → calme d'après) : transition « changement de monde », POUSSIÈRE + FONDU AU NOIR (validé par Sofiane), ≈ 1,1 s au total :
+  1. sur la fin du plan AirPods, un nuage de poussière dorée (fumée réaliste, éclairée par le coucher de soleil, qui monte du bas et des côtés) envahit l'écran en ≈ 0,5 s, pendant que le son de la foule s'étouffe (filtre passe-bas qui descend, comme une tête sous l'eau) ;
+  2. la poussière s'assombrit jusqu'au noir complet (≈ 0,3 s) ;
+  3. ≈ 0,3 s de noir et de silence ;
+  4. le plan du calme apparaît depuis le noir (fondu ≈ 0,4 s) avec le vent ; quelques grains de poussière flottent encore dans les rayons du soleil pendant la première seconde, puis disparaissent.
+  AUCUN texte (pas de « quelques minutes plus tard »). La poussière doit avoir l'air vraie, pas un filtre plat.
 - 9 → 10 (calme → flyer) : fondu enchaîné court (≈ 0,3 s).
 
 ## Qualité de l'image (retour de Sofiane : le premier montage était devenu moche)

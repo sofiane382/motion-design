@@ -195,3 +195,4 @@ Logo « Ai » à recadrer sur clips 1, 2, 3, 5, 6 et sur le flyer.
 - Effets de transition bizarres → transitions normales (coupes nettes, fondus courts pour les écrans Snap).
 - Transition zbeul → calme : la coupe sèche ne marche pas, il faut un vrai « changement de monde ». Choix en attente : poussière / fondu au noir / « Quelques minutes plus tard… ».
 - Qualité de l'image dégradée → section « Qualité de l'image » ajoutée au prompt (pas de compressions en cascade, export haut débit + version 4K).
+- Transition zbeul → calme choisie : poussière dorée qui envahit l'écran + son étouffé → noir → silence → le calme apparaît avec le vent. Aucun texte. JAMAIS de sous-titres.
