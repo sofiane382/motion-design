@@ -187,3 +187,5 @@ Logo « Ai » à recadrer sur clips 1, 2, 3, 5, 6 et sur le flyer.
 - `references/flyer/flyer_tmax.jpg` : le Bitmoji de Quatrepixel (3D Pixar, lunettes vertes, tenue à pois) au guidon d'un TMAX, le vendeur derrière avec une liasse de dollars, sans casque, à l'arrêt, chaise et cartons vides à côté. Validé. Pas de logo « Ai ».
 - Snapcode posé en carte jaune en bas (au montage), plus de téléphone.
 - Prompt image : `prompts/flyer_tmax_image.json`.
+
+- Sous-titre du flyer changé : « Démarque-toi de la concurrence » (remplace « qui fait venir tout le quartier »).

@@ -85,7 +85,7 @@ Snapcode : pose `snapcode_quatrepixel.jpg` en carte (le carré jaune à coins ar
 Textes (uniquement ceux-là, pas de prix, pas de délai, pas de liste de commerces) :
 
 1. En haut, sur le ciel : « TON FLYER VIDÉO », très gros et très lisible.
-2. Sur un bandeau à côté du titre, plus petit : « qui fait venir tout le quartier ».
+2. Sur un bandeau à côté du titre, plus petit : « Démarque-toi de la concurrence ».
 3. En bas, à côté de la carte Snapcode : un bouton « Ajoute-moi sur Snapchat », et dessous le nom d'utilisateur « quatrepixel ».
 4. Sur une ligne d'info avec une icône de repère de carte : « LYON · 38 · 69 ».
 
@@ -93,7 +93,7 @@ Direction artistique : inspire-toi FORTEMENT de `references/flyer/exemple_style_
 
 - les textes sont posés sur des **bandeaux noirs inclinés** (légère rotation, environ -4°), avec des bords nets et une ombre portée : ça fait affiche de rue premium ;
 - le **titre** « TON FLYER VIDÉO » est énorme, en capitales grasses condensées (Anton, dans `montage/flyer/fonts/`), blanc sur bandeau noir incliné, avec « VIDÉO » en jaune Snap (#FFFC00) ;
-- le **sous-titre** « qui fait venir tout le quartier » va sur un bandeau noir plus fin, juste au-dessus ou en dessous du titre, en petites capitales ;
+- le **sous-titre** « Démarque-toi de la concurrence » va sur un bandeau noir plus fin, juste au-dessus ou en dessous du titre, en petites capitales ;
 - une **ligne d'info avec une icône** (comme la main de l'exemple) : une icône de repère de carte + « LYON · 38 · 69 », sur un petit bandeau ;
 - en bas, un **gros bouton brillant et arrondi** comme le bouton bleu de l'exemple, mais en **jaune Snap** avec un léger dégradé et un reflet. À l'intérieur : une pilule noire « AJOUTE-MOI SUR SNAPCHAT » en capitales blanches, puis l'icône fantôme Snapchat + « QUATREPIXEL » en très gros, noir et gras ;
 - la **carte Snapcode** juste au-dessus ou à côté du bouton, pour qu'on puisse la scanner ;
