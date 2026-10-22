@@ -199,7 +199,7 @@ Logo « Ai » à recadrer sur clips 1, 2, 3, 5, 6 et sur le flyer.
 
 ## ✅ Montage final v2 livré (HyperFrames)
 
-- Vidéos : `export/quatrepixel_presentation.mp4` (1080x1920) et `export/quatrepixel_presentation_4K.mp4` (2160x3840) — 30 i/s, H.264 `-crf 14 -preset slow`, AAC 320 kb/s 48 kHz stéréo, **32,8 s**. Sons des clips + sons Snap, aucune musique, aucun sous-titre.
+- Vidéos : `export/quatrepixel_presentation.mp4` (1080x1920, dans le dépôt) et `export/quatrepixel_presentation_4K.mp4` (2160x3840, 117 Mo : trop lourde pour GitHub, livrée à part et refaisable avec `6_exporter.sh`) — 30 i/s, H.264 `-preset slow` (`-crf 14` en 4K ≈ 28 Mb/s ; `-crf 10` en 1080 pour dépasser 15 Mb/s, ≈ 16,6 Mb/s), AAC 320 kb/s 48 kHz stéréo, **32,8 s**. Sons des clips + sons Snap, aucune musique, aucun sous-titre.
 - Transitions : coupes nettes partout ; fondus de 5 images (0,17 s) pour entrer et sortir des écrans Snap ; poussière dorée → noir → silence → le calme apparaît avec le vent et quelques grains dans les rayons (zbeul → calme) ; fondu de 0,3 s du calme vers le flyer.
 - Durée : la somme du tableau fait ≈ 34,8 s. Pour rester entre 30 et 33 s : début de `clip_1` à 0,5 s et de `clip_2` à 0,2 s, écrans Snap de 3,3 s (au lieu de 3,8 / 3,6), en gardant tous les messages et le temps de lecture.
 - Qualité : intermédiaires sans perte (plans en 2160x3840 `-crf 0`, son en WAV), composition rendue en 4K (`--resolution portrait-4k`, images extraites en PNG, master `-crf 0`), un seul encodage final.
