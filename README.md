@@ -7,6 +7,7 @@ utilisables dans FLORA ou tout autre outil de génération.
 ## Structure
 
 - `prompts/` — un fichier par catégorie de vidéo, chaque prompt prêt à copier.
+- `bot-telegram/` — bot Telegram public qui rend les photos de produits propres pour la vente (voir son README).
 
 | Catégorie | Fichier | Usage |
 |---|---|---|
