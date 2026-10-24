@@ -8,6 +8,7 @@ import gc
 import hashlib
 import io
 import logging
+import re
 import time
 
 from telegram import BotCommand, Update
@@ -171,6 +172,15 @@ class PhotoBot:
                                       "(à mettre dans ADMIN_USER_ID si tu es le propriétaire du bot)")
 
     async def other_message(self, update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+        # Une commande copiée-collée (ex. « /monid » mis en forme) n'est pas reconnue
+        # comme commande par Telegram : on la reconnaît nous-mêmes.
+        match = re.match(r"^\s*/([A-Za-z_]+)(@\w+)?(\s|$)", update.effective_message.text or "")
+        commands = {"start": self.start, "aide": self.start, "help": self.start,
+                    "confidentialite": self.privacy, "conditions": self.terms,
+                    "stats": self.show_stats, "monid": self.my_id}
+        if match and match.group(1).lower() in commands:
+            await commands[match.group(1).lower()](update, context)
+            return
         if not await self._spam_check(update):
             return
         if update.effective_chat.type == ChatType.PRIVATE:

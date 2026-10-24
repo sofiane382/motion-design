@@ -366,3 +366,16 @@ def test_render_url_is_detected(monkeypatch):
     monkeypatch.setenv("PORT", "1234")
     config = Config.from_env()
     assert config.webhook_url == "https://x.onrender.com" and config.port == 1234
+
+
+def test_pasted_command_without_command_formatting_still_works(tmp_path):
+    bot = make_bot(tmp_path)
+    update = make_update(user_id=4242)
+    update.effective_message.text = "/monid"
+    asyncio.run(bot.other_message(update, None))
+    assert "4242" in replies(update)[0]
+
+    update = make_update()
+    update.effective_message.text = "bonjour"
+    asyncio.run(bot.other_message(update, None))
+    assert "Envoie-moi une photo" in replies(update)[0]
