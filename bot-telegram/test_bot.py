@@ -330,3 +330,21 @@ def test_stats_db_stores_no_raw_ids(tmp_path):
     assert stats.summary() == {"users": 1, "photos_today": 1, "photos_total": 1, "errors": 1}
     stats.close()
     assert b"123456789" not in path.read_bytes()
+
+
+def test_my_id_command(tmp_path):
+    bot = make_bot(tmp_path)
+    update = make_update(user_id=4242)
+    asyncio.run(bot.my_id(update, None))
+    assert "4242" in replies(update)[0]
+
+
+def test_bot_sets_its_own_menu_and_description(tmp_path):
+    bot = make_bot(tmp_path)
+    app = MagicMock()
+    app.bot.set_my_commands = AsyncMock()
+    app.bot.set_my_short_description = AsyncMock()
+    app.bot.set_my_description = AsyncMock(side_effect=RuntimeError("réseau"))  # ne doit pas planter
+    asyncio.run(bot.setup_profile(app))
+    names = [c.command for c in app.bot.set_my_commands.call_args.args[0]]
+    assert "stats" not in names and "start" in names

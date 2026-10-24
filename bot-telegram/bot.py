@@ -10,7 +10,7 @@ import io
 import logging
 import time
 
-from telegram import Update
+from telegram import BotCommand, Update
 from telegram.constants import ChatType
 from telegram.ext import Application, CommandHandler, ContextTypes, MessageHandler, filters
 
@@ -59,6 +59,19 @@ NOT_AN_IMAGE_TEXT = (
     "Désolé, je ne sais traiter que les images JPEG, PNG, WEBP"
     + (" et HEIC" if HEIC_SUPPORTED else "")
     + ". Ce fichier n'en est pas une 🙂"
+)
+
+BOT_COMMANDS = [
+    BotCommand("start", "Comment ça marche"),
+    BotCommand("confidentialite", "Ce que le bot garde (rien)"),
+    BotCommand("conditions", "Règles d'utilisation"),
+    BotCommand("monid", "Afficher mon numéro Telegram"),
+]
+SHORT_DESCRIPTION = "Rends tes photos de produits propres pour tes annonces. Aucune photo conservée."
+DESCRIPTION = (
+    "Envoie une photo de ton produit : je la rends plus lumineuse et plus nette, en format "
+    "carré sur fond blanc, sans métadonnées. Utilise uniquement tes propres photos. "
+    "Aucune photo n'est conservée."
 )
 
 
@@ -151,6 +164,11 @@ class PhotoBot:
             f"Erreurs : {s['errors']}\n"
             f"En cours : {self.queue.running} · En attente : {self.queue.waiting}"
         ))
+
+    async def my_id(self, update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+        if await self._spam_check(update):
+            await self._reply(update, f"Ton numéro Telegram est : {update.effective_user.id}\n"
+                                      "(à mettre dans ADMIN_USER_ID si tu es le propriétaire du bot)")
 
     async def other_message(self, update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         if not await self._spam_check(update):
@@ -266,17 +284,27 @@ class PhotoBot:
 
     def build_application(self) -> Application:
         app = (Application.builder().token(self.config.token)
-               .concurrent_updates(True).build())
+               .concurrent_updates(True).post_init(self.setup_profile).build())
         app.add_handler(CommandHandler("start", self.start))
         app.add_handler(CommandHandler("aide", self.start))
         app.add_handler(CommandHandler("help", self.start))
         app.add_handler(CommandHandler("confidentialite", self.privacy))
         app.add_handler(CommandHandler("conditions", self.terms))
         app.add_handler(CommandHandler("stats", self.show_stats))
+        app.add_handler(CommandHandler("monid", self.my_id))
         app.add_handler(MessageHandler(filters.PHOTO | filters.Document.ALL, self.media))
         app.add_handler(MessageHandler(~filters.COMMAND & ~filters.StatusUpdate.ALL, self.other_message))
         app.add_error_handler(self._on_error)
         return app
+
+    async def setup_profile(self, app: Application) -> None:
+        """Remplit tout seul le menu des commandes et la description du bot sur Telegram."""
+        try:
+            await app.bot.set_my_commands(BOT_COMMANDS)
+            await app.bot.set_my_short_description(SHORT_DESCRIPTION)
+            await app.bot.set_my_description(DESCRIPTION)
+        except Exception as exc:
+            log.warning("Profil du bot non mis à jour : %s", exc)
 
     async def _on_error(self, update: object, context: ContextTypes.DEFAULT_TYPE) -> None:
         log.error("Erreur non gérée : %s", context.error)

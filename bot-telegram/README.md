@@ -4,7 +4,8 @@ Le bot reçoit une photo de produit. Il la rend plus lumineuse et plus nette, la
 format carré sur fond blanc, retire les métadonnées (GPS, modèle du téléphone) et la renvoie.
 **N'importe qui sur Telegram peut l'utiliser.** Aucune photo n'est conservée.
 
-Commandes : `/start`, `/confidentialite`, `/conditions` et `/stats` (réservée à l'administrateur).
+Commandes : `/start`, `/confidentialite`, `/conditions`, `/monid` et `/stats` (réservée à l'administrateur).
+Au démarrage, le bot remplit tout seul son menu de commandes et sa description sur Telegram.
 
 ## Protections intégrées
 
@@ -25,8 +26,7 @@ les traiter, et il les traite une par une pour consommer peu de mémoire.
 
 ## Statistiques (`/stats`)
 
-Mets ton numéro Telegram dans `ADMIN_USER_ID` : écris à **@userinfobot** sur Telegram
-pour le connaître. La commande `/stats` affiche alors le nombre d'utilisateurs différents,
+Mets ton numéro Telegram dans `ADMIN_USER_ID`. Pour le connaître, envoie `/monid` au bot. La commande `/stats` affiche alors le nombre d'utilisateurs différents,
 le nombre de photos traitées aujourd'hui et au total, et le nombre d'erreurs. Le fichier
 `stats.db` ne contient que des compteurs et des empreintes chiffrées des utilisateurs,
 jamais de photo ni d'identifiant en clair.
