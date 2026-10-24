@@ -1,4 +1,4 @@
-python-telegram-bot==21.6
+python-telegram-bot[webhooks]==21.6
 Pillow==12.3.0
 pillow-heif>=0.18
 python-dotenv>=1.0

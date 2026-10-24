@@ -32,6 +32,8 @@ class Config:
     group_max_per_minute: int = 20
     album_send_pause: float = 1
     stats_db_path: str = "stats.db"
+    webhook_url: str = ""
+    port: int = 10000
 
     @property
     def max_file_size_bytes(self) -> int:
@@ -56,4 +58,7 @@ class Config:
             group_max_per_minute=_int("GROUP_MAX_MESSAGES_PER_MINUTE", 20),
             album_send_pause=_float("ALBUM_SEND_PAUSE_SECONDS", 1),
             stats_db_path=os.getenv("STATS_DB_PATH", "stats.db").strip() or "stats.db",
+            webhook_url=(os.getenv("WEBHOOK_URL", "").strip()
+                         or os.getenv("RENDER_EXTERNAL_URL", "").strip()),
+            port=_int("PORT", 10000),
         )

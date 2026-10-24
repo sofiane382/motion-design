@@ -348,3 +348,21 @@ def test_bot_sets_its_own_menu_and_description(tmp_path):
     asyncio.run(bot.setup_profile(app))
     names = [c.command for c in app.bot.set_my_commands.call_args.args[0]]
     assert "stats" not in names and "start" in names
+
+
+def test_webhook_mode_only_when_url_known():
+    from bot import webhook_settings
+    assert webhook_settings(Config(token="t")) is None
+    settings = webhook_settings(Config(token="t", webhook_url="https://bot.onrender.com/", port=8080))
+    assert settings["webhook_url"] == "https://bot.onrender.com/telegram"
+    assert settings["port"] == 8080 and settings["secret_token"]
+    assert "drop_pending_updates" not in settings
+
+
+def test_render_url_is_detected(monkeypatch):
+    monkeypatch.setenv("TELEGRAM_BOT_TOKEN", "t")
+    monkeypatch.delenv("WEBHOOK_URL", raising=False)
+    monkeypatch.setenv("RENDER_EXTERNAL_URL", "https://x.onrender.com")
+    monkeypatch.setenv("PORT", "1234")
+    config = Config.from_env()
+    assert config.webhook_url == "https://x.onrender.com" and config.port == 1234

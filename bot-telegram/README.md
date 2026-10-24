@@ -33,27 +33,32 @@ jamais de photo ni d'identifiant en clair.
 
 ## Hébergement : obligatoire 24 h/24
 
-Comme le bot est public, il doit tourner en permanence sur un serveur, pas sur ton
-ordinateur. Si ton ordinateur s'éteint, le bot ne répond plus à personne.
+Comme le bot est public, il doit être hébergé sur un serveur, pas sur ton ordinateur.
+Si ton ordinateur s'éteint, le bot ne répond plus à personne.
 
-### Railway (recommandé)
+### Render, offre gratuite (recommandé)
 
-1. Crée un compte sur [railway.com](https://railway.com) avec ton compte GitHub.
-2. **New Project → Deploy from GitHub repo** → choisis `motion-design`.
-3. Dans **Settings**, mets **Root Directory** = `bot-telegram`. Railway lit le `Procfile`
-   et lance `python bot.py` tout seul.
-4. Dans **Variables**, ajoute `TELEGRAM_BOT_TOKEN` et `ADMIN_USER_ID`. Les autres
-   variables sont facultatives : les valeurs par défaut s'appliquent.
-5. Optionnel, pour que `/stats` ne reparte pas de zéro à chaque mise à jour : ajoute un
-   **Volume** monté sur `/data`, puis la variable `STATS_DB_PATH=/data/stats.db`.
+Sur Render, le bot fonctionne en mode « webhook » : c'est Telegram qui le contacte à
+chaque message. Le bot le détecte tout seul, il n'y a rien à régler. Grâce à ce mode,
+l'offre gratuite suffit. Le bot s'endort après 15 minutes sans message, et le message
+suivant le réveille. Ce premier message met alors environ 1 minute à recevoir sa
+réponse, les suivants sont rapides.
 
-### Render
+1. Crée un compte sur [render.com](https://render.com) avec ton compte GitHub.
+2. Clique sur **New +**, puis **Blueprint**, et choisis le dépôt `motion-design`.
+   Render lit le fichier `render.yaml` et prépare tout.
+3. Render demande deux valeurs :
+   - `TELEGRAM_BOT_TOKEN` : le code secret donné par @BotFather ;
+   - `ADMIN_USER_ID` : laisse vide pour l'instant.
+4. Clique sur **Apply** et attends 2 à 3 minutes.
+5. Envoie `/monid` à ton bot. Mets le numéro qu'il te répond dans **Environment →
+   ADMIN_USER_ID** sur Render, puis enregistre.
 
-Sur Render, crée un **Background Worker** avec Root Directory `bot-telegram`, la commande
-de build `pip install -r requirements.txt` et la commande de lancement `python bot.py`.
-Attention : l'offre gratuite de Render ne propose que des « Web Services » qui
-s'endorment après 15 minutes sans visite. Un bot Telegram s'y arrête donc. Sur Render,
-il faut une offre payante (environ 7 $/mois).
+### Railway (si les inscriptions sont ouvertes)
+
+Choisis **New Project**, puis **Deploy from GitHub repo**, avec Root Directory =
+`bot-telegram`, et ajoute les variables `TELEGRAM_BOT_TOKEN` et `ADMIN_USER_ID`. Le bot y
+tourne en continu. Railway coûte environ 5 $ par mois après le crédit d'essai.
 
 ### Les limites du gratuit
 
@@ -61,9 +66,13 @@ il faut une offre payante (environ 7 $/mois).
   Une photo de 4000 px demande environ 100 à 150 Mo pendant son traitement. C'est pour ça
   que le bot n'en traite que 2 à la fois. Ne monte pas `MAX_CONCURRENT_JOBS` au-delà de 2
   sans plus de mémoire.
-- **Temps de calcul** : Railway offre un crédit d'essai, puis l'offre Hobby coûte environ
-  5 $/mois, utilisation comprise pour un petit bot. Les tarifs changent : vérifie-les sur
-  le site.
+- **Temps de calcul** : l'offre gratuite de Render donne 750 heures par mois, ce qui
+  suffit pour un bot qui tourne tout le mois. Le processeur est lent, donc une photo met
+  quelques secondes. Les tarifs changent : vérifie-les sur le site.
+- **Statistiques** : sur l'offre gratuite, le disque est effacé à chaque mise en veille ou
+  mise à jour. `/stats` compte donc depuis le dernier réveil du bot. Pour garder les
+  chiffres sur la durée, il faut une offre payante avec un disque permanent : mets alors
+  `STATS_DB_PATH` sur ce disque.
 - **Si beaucoup de monde l'utilise** : les gens attendent plus longtemps. Le bot leur
   indique « Tu es en position X dans la file ». Il ne plante pas, il ralentit. Si l'attente
   devient trop longue, passe à une offre avec plus de mémoire et de processeur, puis monte

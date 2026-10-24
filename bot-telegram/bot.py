@@ -310,14 +310,42 @@ class PhotoBot:
         log.error("Erreur non gérée : %s", context.error)
 
 
+def webhook_settings(config: Config) -> dict | None:
+    """Réglages du mode « webhook » (Telegram appelle le bot), ou None pour le mode classique.
+
+    Sur Render, RENDER_EXTERNAL_URL est fourni automatiquement : rien à configurer.
+    Ce mode permet l'offre gratuite de Render : le bot s'endort quand personne ne l'utilise
+    et Telegram le réveille au message suivant.
+    """
+    base = config.webhook_url
+    if not base:
+        return None
+    path = "telegram"
+    return {
+        "listen": "0.0.0.0",
+        "port": config.port,
+        "url_path": path,
+        "webhook_url": f"{base.rstrip('/')}/{path}",
+        # Empêche quelqu'un d'autre d'envoyer de faux messages au bot
+        "secret_token": hashlib.sha256(("webhook:" + config.token).encode()).hexdigest(),
+        "allowed_updates": Update.ALL_TYPES,
+        # Surtout pas drop_pending_updates : le message qui réveille le bot serait perdu
+    }
+
+
 def main() -> None:
     config = Config.from_env()
     if not config.token:
         raise SystemExit("TELEGRAM_BOT_TOKEN manquant : ajoute-le dans le fichier .env")
     bot = PhotoBot(config)
-    log.info("Bot démarré (public). Admin configuré : %s", "oui" if config.admin_user_id else "non")
-    bot.build_application().run_polling(allowed_updates=Update.ALL_TYPES, drop_pending_updates=True)
-
+    app = bot.build_application()
+    webhook = webhook_settings(config)
+    log.info("Bot démarré (public, mode %s). Admin configuré : %s",
+             "webhook" if webhook else "polling", "oui" if config.admin_user_id else "non")
+    if webhook:
+        app.run_webhook(**webhook)
+    else:
+        app.run_polling(allowed_updates=Update.ALL_TYPES, drop_pending_updates=True)
 
 if __name__ == "__main__":
     main()
